@@ -76,7 +76,7 @@ export default class Footer extends Component {
                                             <img src={logo} alt="logo"/>
                                         </a>
                                         <p className="slogan">
-                                            <br/>Omega Design
+                                            <br/>Shine Design
                                         </p>
                                     </div>
                                 </div>

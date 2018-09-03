@@ -34,9 +34,9 @@ export default class extends Component {
 
         clipboard.on('success', function (e) {
             e.clearSelection();
-            $(e.trigger).text('copied');
+            $(e.trigger).text('复制成功');
             setTimeout(function () {
-                $(e.trigger).text('copy');
+                $(e.trigger).text('复制');
             }, 700);
 
         });

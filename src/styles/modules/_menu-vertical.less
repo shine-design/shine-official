@@ -51,6 +51,15 @@
       color: @color_blue;
     }
 
+    li > a:hover {
+      color: #1890ff;
+    }
+
+    li > a.active {
+      background-color: #e6f7ff;
+      color: #1890ff;
+    }
+
     a {
       padding-left: 40px;
     }
@@ -87,7 +96,7 @@
     line-height: inherit;
     border-radius: 3px;
     border-bottom: 1px solid lighten(@color_grey-light, 10%);
-    text-decoration: none!important;
+    text-decoration: none !important;
 
     .transition-background();
 

@@ -162,46 +162,46 @@ export default class Filter extends Component {
                         <i className="pe-7s-angle-down"/>
                         <ul className="changelog-scroll-to-list">
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v211">v2.1.1</a>
+                                <a  className="js-scroll-to" data-target="#v211">v2.1.1</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v210">v2.1.0</a>
+                                <a  className="js-scroll-to" data-target="#v210">v2.1.0</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v200">v2.0.0</a>
+                                <a  className="js-scroll-to" data-target="#v200">v2.0.0</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v190">v1.9.0</a>
+                                <a  className="js-scroll-to" data-target="#v190">v1.9.0</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v180">v1.8.0</a>
+                                <a  className="js-scroll-to" data-target="#v180">v1.8.0</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v170">v1.7.0</a>
+                                <a  className="js-scroll-to" data-target="#v170">v1.7.0</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v160">v1.6.0</a>
+                                <a  className="js-scroll-to" data-target="#v160">v1.6.0</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v150">v1.5.0</a>
+                                <a  className="js-scroll-to" data-target="#v150">v1.5.0</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v140">v1.4.0</a>
+                                <a  className="js-scroll-to" data-target="#v140">v1.4.0</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v130">v1.3.0</a>
+                                <a  className="js-scroll-to" data-target="#v130">v1.3.0</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v120">v1.2.0</a>
+                                <a  className="js-scroll-to" data-target="#v120">v1.2.0</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v110">v1.1.0</a>
+                                <a  className="js-scroll-to" data-target="#v110">v1.1.0</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v002">v0.0.2</a>
+                                <a  className="js-scroll-to" data-target="#v002">v0.0.2</a>
                             </li>
                             <li className="changelog-scroll-to-list-item">
-                                <a href="#" className="js-scroll-to" data-target="#v001">v0.0.1</a>
+                                <a  className="js-scroll-to" data-target="#v001">v0.0.1</a>
                             </li>
                         </ul>
                     </div>

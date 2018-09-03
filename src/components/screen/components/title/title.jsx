@@ -8,7 +8,7 @@ export default class Language extends Component {
         return (
             <Fragment>
                 <div className="page-info helper center">
-                    <h1 className="page-title">Omega Design</h1>
+                    <h1 className="page-title">Shine.</h1>
                     <h2 className="page-description">基于 React 实现的企业级响应式 UI 设计语言</h2>
                 </div>
                 <div className="header-back-buttons helper center">
