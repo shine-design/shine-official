@@ -37,6 +37,8 @@ export default class Tutorial extends Component {
                                                component={require('./components/Grid/Grid').default}/>
                                         <Route path="/tutorial/icon" exact
                                                component={require('./components/Icon/Icon').default}/>
+                                        <Route path="/tutorial/color" exact
+                                               component={require('./components/Color/Color').default}/>
                                     </Switch>
                                 </div>
                             </div>
@@ -65,6 +67,9 @@ export default class Tutorial extends Component {
                                             <li>
                                                 <a className='selected'>基础</a>
                                                 <ul>
+                                                    <li>
+                                                        <NavLink to='/tutorial/color'>状态颜色</NavLink>
+                                                    </li>
                                                     <li>
                                                         <NavLink to='/tutorial/icon'>图标</NavLink>
                                                     </li>
