@@ -38,9 +38,6 @@ export default class extends Component {
                             <Fragment>
                                 <Row className={['helper', 'mb10', 'demo']}>
                                     <Col part={1}>
-                                        <Button value='按钮'/>
-                                    </Col>
-                                    <Col part={1}>
                                         <Button value='按钮' color='brand'/>
                                     </Col>
                                     <Col part={1}>
@@ -65,13 +62,10 @@ export default class extends Component {
                                         <Button value='按钮' color='primary'/>
                                     </Col>
                                     <Col part={1}>
-                                        <Button value='按钮' color='light'/>
+                                        <Button value='按钮'/>
                                     </Col>
                                 </Row>
                                 <Row className={['helper', 'mb10', 'demo']}>
-                                    <Col part={1}>
-                                        <Button value='按钮'/>
-                                    </Col>
                                     <Col part={1}>
                                         <Button value='按钮' color='outline-brand'/>
                                     </Col>
@@ -96,14 +90,11 @@ export default class extends Component {
                                     <Col part={1}>
                                         <Button value='按钮' color='outline-primary'/>
                                     </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='outline-light'/>
-                                    </Col>
                                 </Row>
                             </Fragment>
                         ),
                         code: {
-                            code: require('../../../../code/grid/basic').default,
+                            code: require('../../../../code/button/basic').default,
                             language: 'markup'
                         }
                     }}/>
@@ -116,73 +107,225 @@ export default class extends Component {
                         display: (
                             <Fragment>
                                 <Row className={['helper', 'mb10', 'demo']}>
-                                    <Col part={1}>
-                                        <Button value='按钮'/>
+                                    <Col part={2}>
+                                        <Button value='按钮' color='brand' btnStyle='square' isBlock={true}/>
                                     </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='brand'/>
+                                    <Col part={2}>
+                                        <Button value='按钮' color='accent' btnStyle='pill' isBlock={true}/>
                                     </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='accent'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='focus'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='metal'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='success'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='warning'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='danger'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='primary'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='light'/>
-                                    </Col>
-                                </Row>
-                                <Row className={['helper', 'mb10', 'demo']}>
-                                    <Col part={1}>
-                                        <Button value='按钮'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='outline-brand'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='outline-accent'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='outline-focus'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='outline-metal'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='outline-success'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='outline-warning'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='outline-danger'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='outline-primary'/>
-                                    </Col>
-                                    <Col part={1}>
-                                        <Button value='按钮' color='outline-light'/>
+                                    <Col part={2}>
+                                        <Button value='按钮' color='focus' isBlock={true}/>
                                     </Col>
                                 </Row>
                             </Fragment>
                         ),
                         code: {
-                            code: require('../../../../code/grid/basic').default,
+                            code: require('../../../../code/button/style').default,
+                            language: 'markup'
+                        }
+                    }}/>
+                    <p className='title'>渐变按钮</p>
+                    <p>对默认颜色不满意？我们为您提供了更为个性化的按钮颜色，通过 <code>gradient</code> 属性可以设置渐变色，只需指定起始色和目标色。
+                    </p>
+                    <Example {...{
+                        className: ['demo-button'],
+                        display: (
+                            <Fragment>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={2}>
+                                        <Button gradient={{from: 'danger', to: 'success'}} value='按钮' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button gradient={{from: 'primary', to: 'warning'}} value='按钮' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button gradient={{from: 'brand', to: 'metal'}} value='按钮' isBlock={true}/>
+                                    </Col>
+                                </Row>
+                            </Fragment>
+                        ),
+                        code: {
+                            code: require('../../../../code/button/gradient').default,
+                            language: 'markup'
+                        }
+                    }}/>
+                    <p className='title'>按钮尺寸</p>
+                    <p>我们提供了三种尺寸的按钮，通过 <code>size</code> 属性可以设置不同的尺寸。
+                    </p>
+                    <Example {...{
+                        className: ['demo-button'],
+                        display: (
+                            <Fragment>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={2}>
+                                        <Button color='brand' size='lg' value='按钮' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='brand' value='按钮' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='brand' size='sm' value='按钮' isBlock={true}/>
+                                    </Col>
+                                </Row>
+                            </Fragment>
+                        ),
+                        code: {
+                            code: require('../../../../code/button/size').default,
+                            language: 'markup'
+                        }
+                    }}/>
+
+
+                    <p className='title'>按钮状态</p>
+                    <p>用户在进行交互时，我们针对不同按钮提供了默认、激活、禁用三种状态。</p>
+                    <Example {...{
+                        className: ['demo-button'],
+                        display: (
+                            <Fragment>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={2}>
+                                        <Button color='brand' value='按钮' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='danger' value='按钮' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='warning' value='按钮' isBlock={true}/>
+                                    </Col>
+                                </Row>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={2}>
+                                        <Button color='brand' isActive={true} value='按钮' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='danger' isActive={true} value='按钮' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='warning' isActive={true} value='按钮' isBlock={true}/>
+                                    </Col>
+                                </Row>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={2}>
+                                        <Button color='brand' isDisabled={true} value='按钮' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='danger' isDisabled={true} value='按钮' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='warning' isDisabled={true} value='按钮' isBlock={true}/>
+                                    </Col>
+                                </Row>
+                            </Fragment>
+                        ),
+                        code: {
+                            code: require('../../../../code/button/state').default,
+                            language: 'markup'
+                        }
+                    }}/>
+
+                    <p className='title'>元素状态</p>
+                    <p>与原生 <code>DOM</code> 结构类似，我们提供了行间状态和块级状态两种元素状态，块级状态默认占满整个父级容器。</p>
+                    <Example {...{
+                        className: ['demo-button'],
+                        display: (
+                            <Fragment>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={12}>
+                                        <Button color='brand' btnStyle='square' value='按钮'/>
+                                        <Button color='danger' btnStyle='square' value='按钮'/>
+                                        <Button color='warning' btnStyle='square' value='按钮'/>
+                                    </Col>
+                                </Row>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={12}>
+                                        <Button color='brand' value='按钮' btnStyle='square' isBlock={true}/>
+                                    </Col>
+                                    <Col part={12}>
+                                        <Button color='danger' value='按钮' btnStyle='square' isBlock={true}/>
+                                    </Col>
+                                    <Col part={12}>
+                                        <Button color='warning' value='按钮' btnStyle='square' isBlock={true}/>
+                                    </Col>
+                                </Row>
+                            </Fragment>
+                        ),
+                        code: {
+                            code: require('../../../../code/button/block').default,
+                            language: 'markup'
+                        }
+                    }}/>
+                    <p className='title'>阴影效果</p>
+                    <p>我们为按钮提供了一种阴影特效，使用 <code>isAir</code> 属性可以使按钮产生立体效果。</p>
+                    <Example {...{
+                        className: ['demo-button'],
+                        display: (
+                            <Fragment>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={2}>
+                                        <Button color='brand' value='按钮' isAir={true} btnStyle='square' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='danger' value='按钮' isAir={true} btnStyle='pill' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='success' value='按钮' isAir={true} isBlock={true}/>
+                                    </Col>
+                                </Row>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={2}>
+                                        <Button color='outline-brand' value='按钮' isAir={true} btnStyle='square'
+                                                isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='outline-danger' value='按钮' isAir={true} btnStyle='pill'
+                                                isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='outline-success' value='按钮' isAir={true} isBlock={true}/>
+                                    </Col>
+                                </Row>
+                            </Fragment>
+                        ),
+                        code: {
+                            code: require('../../../../code/button/air').default,
+                            language: 'markup'
+                        }
+                    }}/>
+                    <p className='title'>图标按钮</p>
+                    <p>使用带图标的按钮可以使用户更容易理解，所有可使用的按钮参考<NavLink to='/tutorial/color'>状态颜色</NavLink>。</p>
+                    <Example {...{
+                        className: ['demo-button'],
+                        display: (
+                            <Fragment>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={2}>
+                                        <Button color='brand' value='编辑' iconName='sh-icon-edit' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='danger' value='删除' iconName='sh-icon-trash' isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='success' value='首页' iconName='sh-icon-home' isBlock={true}/>
+                                    </Col>
+                                </Row>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={2}>
+                                        <Button color='outline-brand' value='编辑' iconName='sh-icon-edit'
+                                                isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='outline-danger' value='删除' iconName='sh-icon-trash'
+                                                isBlock={true}/>
+                                    </Col>
+                                    <Col part={2}>
+                                        <Button color='outline-success' value='首页' iconName='sh-icon-home'
+                                                isBlock={true}/>
+                                    </Col>
+                                </Row>
+                            </Fragment>
+                        ),
+                        code: {
+                            code: require('../../../../code/button/icon').default,
                             language: 'markup'
                         }
                     }}/>
