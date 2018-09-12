@@ -41,7 +41,7 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "resolve": "1.6.0",
-    "shinec": "0.0.16",
+    "shinec": "0.0.17",
     "slicknav": "^1.0.8",
     "style-loader": "0.19.0",
     "superfish": "^1.7.6",
