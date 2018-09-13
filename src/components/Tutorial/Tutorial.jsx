@@ -41,6 +41,8 @@ export default class Tutorial extends Component {
                                                component={require('./components/Color/Color').default}/>
                                         <Route path="/tutorial/button" exact
                                                component={require('./components/Button/Button').default}/>
+                                        <Route path="/tutorial/event" exact
+                                               component={require('./components/Event/Event').default}/>
                                     </Switch>
                                 </div>
                             </div>
@@ -77,6 +79,14 @@ export default class Tutorial extends Component {
                                                     </li>
                                                     <li>
                                                         <NavLink to='/tutorial/button'>按钮</NavLink>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a className='selected'>参考资料</a>
+                                                <ul>
+                                                    <li>
+                                                        <NavLink to='/tutorial/event'>事件系统</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>

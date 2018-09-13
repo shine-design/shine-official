@@ -4,7 +4,6 @@ import Note from "../../../common/Note/Note";
 import Info from "../../../common/Info/Info";
 import APITable from '../../../common/APITable/APITable';
 import {NavLink} from "react-router-dom";
-import {formatDate} from '../../../../plugins/base';
 
 import {Col, Row, Button} from 'shinec';
 
@@ -339,7 +338,7 @@ export default class extends Component {
                     }}/>
 
                     <p className='title'>事件系统</p>
-                    <p>按钮组件支持合成事件系统，请参考<NavLink to='/event'>相关资料</NavLink>。</p>
+                    <p>按钮组件支持合成事件系统，请参考<NavLink to='/tutorial/event'>相关资料</NavLink>。</p>
                     <Example {...{
                         className: ['demo-button'],
                         display: (
@@ -358,7 +357,7 @@ export default class extends Component {
                                         }}/>
                                     </Col>
                                     <Col part={12}>
-                                        <div className='displayBox' />
+                                        <div className='displayBox'/>
                                     </Col>
                                 </Row>
                             </Fragment>
@@ -399,7 +398,7 @@ export default class extends Component {
                 <Info {...{
                     description: '事件系统'
                 }}>
-                    <p>按钮组件支持合成事件系统，请参考<NavLink to='/event'>相关资料</NavLink>。</p>
+                    <p>按钮组件支持合成事件系统，请参考<NavLink to='/tutorial/event'>相关资料</NavLink>。</p>
                 </Info>
             </Fragment>
         );
