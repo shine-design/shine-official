@@ -4,12 +4,20 @@ import Note from "../../../common/Note/Note";
 import Info from "../../../common/Info/Info";
 import APITable from '../../../common/APITable/APITable';
 import {NavLink} from "react-router-dom";
+import {formatDate} from '../../../../plugins/base';
 
 import {Col, Row, Button} from 'shinec';
 
 import './style.less';
 
 export default class extends Component {
+
+    _renderEvent(e) {
+        const _dom = document.querySelector('.displayBox');
+        _dom.innerHTML += ('<p>' + (new Date()).format('yyyy-MM-dd hh:mm:ss') + '您触发了' + e.type + '事件' + '</p>');
+        _dom.scrollTop = _dom.scrollHeight;
+    }
+
     render() {
         return (
             <Fragment>
@@ -329,6 +337,37 @@ export default class extends Component {
                             language: 'markup'
                         }
                     }}/>
+
+                    <p className='title'>事件系统</p>
+                    <p>按钮组件支持合成事件系统，请参考<NavLink to='/event'>相关资料</NavLink>。</p>
+                    <Example {...{
+                        className: ['demo-button'],
+                        display: (
+                            <Fragment>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={2}>
+                                        <Button {...{
+                                            color: 'brand',
+                                            value: '点击',
+                                            isBlock: true,
+                                            callbacks: {
+                                                onClick: this._renderEvent,
+                                                onDoubleClick: this._renderEvent,
+                                                onMouseEnter: this._renderEvent
+                                            }
+                                        }}/>
+                                    </Col>
+                                    <Col part={12}>
+                                        <div className='displayBox' />
+                                    </Col>
+                                </Row>
+                            </Fragment>
+                        ),
+                        code: {
+                            code: require('../../../../code/button/event').default,
+                            language: 'markup'
+                        }
+                    }}/>
                 </Info>
                 <Info {...{
                     description: '配置参数'
@@ -360,7 +399,7 @@ export default class extends Component {
                 <Info {...{
                     description: '事件系统'
                 }}>
-
+                    <p>按钮组件支持合成事件系统，请参考<NavLink to='/event'>相关资料</NavLink>。</p>
                 </Info>
             </Fragment>
         );

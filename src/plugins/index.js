@@ -5,4 +5,4 @@ import 'prismjs'
 import './instafilta';
 import './jquery.resmenu'
 import './jquery.tendina.min';
-import './jquery.steps.min';
+import './jquery.steps';

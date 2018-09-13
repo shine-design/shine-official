@@ -29,7 +29,7 @@ export default class extends Component {
 
 
     render() {
-        const {code, display, className=[]} = this.props;
+        const {code, display, className = []} = this.props;
         return (
             <Fragment>
                 <div ref='example'
