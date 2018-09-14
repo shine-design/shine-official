@@ -149,12 +149,22 @@ export default class extends Component {
                         <li><p><code>Number</code> screenY</p></li>
                         <li><p><code>Boolean</code> shiftKey</p></li>
                     </ul>
+                    <Note {...{
+                        type: 'info',
+                        message: (<Fragment>
+                            <p>
+                                <code>onMouseEnter</code> 和 <code>onMouseLeave</code> 事件由失去焦点的元素到正在输入的元素传播，并不是普通的冒泡，也没有捕获阶段。
+                            </p>
+                        </Fragment>)
+                    }}/>
                     <p className='title'>选择事件</p>
                     <p>事件名称</p>
                     <p><code>onSelect</code></p>
                     <p className='title'>触碰事件</p>
                     <p>事件名称</p>
-                    <p><code>onTouchCancel</code>、<code>onTouchEnd</code>、<code>onTouchMove</code>、<code>onTouchStart</code></p>
+                    <p>
+                        <code>onTouchCancel</code>、<code>onTouchEnd</code>、<code>onTouchMove</code>、<code>onTouchStart</code>
+                    </p>
                     <p>事件属性</p>
                     <ul>
                         <li><p><code>Boolean</code> altKey</p></li>
@@ -184,6 +194,36 @@ export default class extends Component {
                         <li><p><code>Number</code> deltaY</p></li>
                         <li><p><code>Number</code> deltaZ</p></li>
                     </ul>
+                    <p className='title'>多媒体事件</p>
+                    <p>事件名称</p>
+                    <p>
+                        <code>onAbort</code>、<code>onCanPlay</code>、<code>onCanPlayThrough</code>、<code>onDurationChange</code>、<code>onEmptied</code>、<code>onEncrypted</code>、<code>onEnded</code>、<code>onError</code>、<code>onLoadedData</code>、<code>onLoadedMetadata</code>、
+                        <code>onLoadStart</code>、<code>onPause</code>、<code>onPlay</code>、<code>onPlaying</code>、<code>onProgress</code>、<code>onRateChange</code>、<code>onSeeked</code>、<code>onSeeking</code>、<code>onStalled</code>、<code>onSuspend</code>、
+                        <code>onTimeUpdate</code>、<code>onVolumeChange</code>、<code>onWaiting</code></p>0
+                    <p className='title'>图片事件</p>
+                    <p>事件名称</p>
+                    <p><code>onLoad</code>、<code>onError</code></p>
+                    <p className='title'>动画事件</p>
+                    <p>事件名称</p>
+                    <p><code>onAnimationStart</code>、<code>onAnimationEnd</code>、<code>onAnimationIteration</code></p>
+                    <p>事件属性</p>
+                    <ul>
+                        <li><p><code>String</code> animationName</p></li>
+                        <li><p><code>String</code> pseudoElement</p></li>
+                        <li><p><code>Float</code> elapsedTime</p></li>
+                    </ul>
+                    <p className='title'>过渡事件</p>
+                    <p>事件名称</p>
+                    <p><code>onTransitionEnd</code></p>
+                    <p>事件属性</p>
+                    <ul>
+                        <li><p><code>String</code> propertyName</p></li>
+                        <li><p><code>String</code> pseudoElement</p></li>
+                        <li><p><code>Float</code> elapsedTime</p></li>
+                    </ul>
+                    <p className='title'>其他事件</p>
+                    <p>事件名称</p>
+                    <p><code>onToggle</code></p>
                 </Info>
             </Fragment>
         );
