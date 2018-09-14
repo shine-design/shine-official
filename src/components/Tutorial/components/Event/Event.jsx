@@ -55,16 +55,16 @@ export default class extends Component {
                     <p><code>event</code> 参数具有如下 API ：</p>
                     <ul>
                         <li><p><code>boolean</code> bubbles</p></li>
-                        <li><p><code>boolean</code>  cancelable</p></li>
+                        <li><p><code>boolean</code> cancelable</p></li>
                         <li><p><code>DOMEventTarget</code> currentTarget</p></li>
-                        <li><p><code>boolean</code>  defaultPrevented</p></li>
+                        <li><p><code>boolean</code> defaultPrevented</p></li>
                         <li><p><code>number</code> eventPhase</p></li>
-                        <li><p><code>boolean</code>  isTrusted</p></li>
+                        <li><p><code>boolean</code> isTrusted</p></li>
                         <li><p><code>DOMEvent</code> nativeEvent</p></li>
                         <li><p><code>void</code> preventDefault()</p></li>
-                        <li><p><code>boolean</code>  isDefaultPrevented()</p></li>
+                        <li><p><code>boolean</code> isDefaultPrevented()</p></li>
                         <li><p><code>void</code> stopPropagation()</p></li>
-                        <li><p><code>boolean</code>  isPropagationStopped()</p></li>
+                        <li><p><code>boolean</code> isPropagationStopped()</p></li>
                         <li><p><code>DOMEventTarget</code> target</p></li>
                         <li><p><code>number</code> timeStamp</p></li>
                         <li><p><code>string</code> type</p></li>
@@ -74,6 +74,116 @@ export default class extends Component {
                         type: 'info',
                         message: (<Fragment>如果你需要使用原生事件的 API 接口，你可以使用 <code>nativeEvent</code> 属性找到它。</Fragment>)
                     }}/>
+                </Info>
+                <Info {...{
+                    description: '全部事件'
+                }}>
+                    <p>
+                        Shine Design 支持如下合成事件：
+                    </p>
+                    <p className='title'>剪贴板事件</p>
+                    <p>事件名称</p>
+                    <p><code>onCopy</code>、<code>onCut</code>、<code>onPaste</code></p>
+                    <p>事件属性</p>
+                    <ul>
+                        <li><p><code>DOMDataTransfer</code> clipboardData</p></li>
+                    </ul>
+                    <p className='title'>输入事件</p>
+                    <p>事件名称</p>
+                    <p><code>onCompositionEnd</code>、<code>onCompositionStart</code>、<code>onCompositionUpdate</code>
+                    </p>
+                    <p>事件属性</p>
+                    <ul>
+                        <li><p><code>String</code> data</p></li>
+                    </ul>
+                    <p className='title'>键盘事件</p>
+                    <p>事件名称</p>
+                    <p><code>onKeyDown</code>、<code>onKeyPress</code>、<code>onKeyUp</code></p>
+                    <p>事件属性</p>
+                    <ul>
+                        <li><p><code>Boolean</code> altKey</p></li>
+                        <li><p><code>Number</code> charCode</p></li>
+                        <li><p><code>Boolean</code> ctrlKey</p></li>
+                        <li><p><code>Boolean</code> getModifierState(key)</p></li>
+                        <li><p><code>String</code> key</p></li>
+                        <li><p><code>Number</code> keyCode</p></li>
+                        <li><p><code>String</code> locale</p></li>
+                        <li><p><code>Number</code> location</p></li>
+                        <li><p><code>Boolean</code> metaKey</p></li>
+                        <li><p><code>Boolean</code> repeat</p></li>
+                        <li><p><code>Boolean</code> shiftKey</p></li>
+                        <li><p><code>Number</code> which</p></li>
+                    </ul>
+                    <p className='title'>焦点事件</p>
+                    <p>事件名称</p>
+                    <p><code>onFocus</code>、<code>onBlur</code></p>
+                    <p>事件属性</p>
+                    <ul>
+                        <li><p><code>DOMEventTarget</code> relatedTarget</p></li>
+                    </ul>
+                    <p className='title'>表单事件</p>
+                    <p>事件名称</p>
+                    <p><code>onChange</code>、<code>onInput</code>、<code>onSubmit</code></p>
+                    <p>事件属性</p>
+                    <p>请查阅 <NavLink to='/tutorial/form'>表单组件</NavLink> 相关内容。</p>
+                    <p className='title'>鼠标事件</p>
+                    <p>事件名称</p>
+                    <p>
+                        <code>onClick</code>、<code>onContextMenu</code>、<code>onDoubleClick</code>、<code>onDrag</code>、<code>onDragEnd</code>、<code>onDragEnter</code>、<code>onDragExit</code>、<code>onDragLeave</code>、<code>onDragOver</code>、<code>onDragStart</code>、
+                        <code>onDrop</code>、<code>onMouseDown</code>、<code>onMouseEnter</code>、<code>onMouseLeave</code>、<code>onMouseMove</code>、<code>onMouseOut</code>、<code>onMouseOver</code>、<code>onMouseUp</code>
+                    </p>
+                    <p>事件属性</p>
+                    <ul>
+                        <li><p><code>Boolean</code> altKey</p></li>
+                        <li><p><code>Number</code> button</p></li>
+                        <li><p><code>Number</code> buttons</p></li>
+                        <li><p><code>Number</code> clientX</p></li>
+                        <li><p><code>Number</code> clientY</p></li>
+                        <li><p><code>Boolean</code> ctrlKey</p></li>
+                        <li><p><code>Boolean</code> getModifierState(key)</p></li>
+                        <li><p><code>Boolean</code> metaKey</p></li>
+                        <li><p><code>Number</code> pageX</p></li>
+                        <li><p><code>Number</code> pageY</p></li>
+                        <li><p><code>DOMEventTarget</code> relatedTarget</p></li>
+                        <li><p><code>Number</code> screenX</p></li>
+                        <li><p><code>Number</code> screenY</p></li>
+                        <li><p><code>Boolean</code> shiftKey</p></li>
+                    </ul>
+                    <p className='title'>选择事件</p>
+                    <p>事件名称</p>
+                    <p><code>onSelect</code></p>
+                    <p className='title'>触碰事件</p>
+                    <p>事件名称</p>
+                    <p><code>onTouchCancel</code>、<code>onTouchEnd</code>、<code>onTouchMove</code>、<code>onTouchStart</code></p>
+                    <p>事件属性</p>
+                    <ul>
+                        <li><p><code>Boolean</code> altKey</p></li>
+                        <li><p><code>DOMTouchList</code> changedTouches</p></li>
+                        <li><p><code>Boolean</code> ctrlKey</p></li>
+                        <li><p><code>Boolean</code> getModifierState(key)</p></li>
+                        <li><p><code>Boolean</code> metaKey</p></li>
+                        <li><p><code>Boolean</code> shiftKey</p></li>
+                        <li><p><code>DOMTouchList</code> targetTouches</p></li>
+                        <li><p><code>DOMTouchList</code> touches</p></li>
+                    </ul>
+                    <p className='title'>滚动事件</p>
+                    <p>事件名称</p>
+                    <p><code>onScroll</code></p>
+                    <p>事件属性</p>
+                    <ul>
+                        <li><p><code>Number</code> detail</p></li>
+                        <li><p><code>DOMAbstractView</code> view</p></li>
+                    </ul>
+                    <p className='title'>滚轮事件</p>
+                    <p>事件名称</p>
+                    <p><code>onWheel</code></p>
+                    <p>事件属性</p>
+                    <ul>
+                        <li><p><code>Number</code> deltaMode</p></li>
+                        <li><p><code>Number</code> deltaX</p></li>
+                        <li><p><code>Number</code> deltaY</p></li>
+                        <li><p><code>Number</code> deltaZ</p></li>
+                    </ul>
                 </Info>
             </Fragment>
         );
