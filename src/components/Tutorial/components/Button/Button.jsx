@@ -21,7 +21,7 @@ export default class extends Component {
         return (
             <Fragment>
                 <Info {...{
-                    title: "Button 按钮",
+                    title: "按钮",
                     description: '用于触发若干操作命令或用户行为',
                     guide: true
                 }}>
