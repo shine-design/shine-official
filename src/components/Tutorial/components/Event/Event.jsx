@@ -44,7 +44,7 @@ export default class extends Component {
                     <p>代码示例如下：</p>
                     <Code {...{
                         code: require('../../../../code/event/basic').default,
-                        language: 'markup'
+                        language: 'jsx'
                     }}/>
                     <p className='title'>事件参数</p>
                     <p>

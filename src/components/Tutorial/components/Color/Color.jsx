@@ -79,7 +79,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/color/bg').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }} />
                     <p className='title'>辅助色</p>
@@ -126,7 +126,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/color/helper').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }} />
 
