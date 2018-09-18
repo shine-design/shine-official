@@ -38,7 +38,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/icon/basic').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }} />
                     <p className='title'>图标尺寸</p>
@@ -57,7 +57,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/icon/size').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }} />
                     <p className='title'>等宽图标</p>
@@ -86,7 +86,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/icon/fw').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }} />
                     <p className='title'>用于列表</p>
@@ -106,7 +106,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/icon/list').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }} />
                     <p className='title'>动画</p>
@@ -125,7 +125,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/icon/spin').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }} />
                     <p className='title'>旋转和翻转</p>
@@ -144,7 +144,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/icon/rotate').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }} />
                 </Info>

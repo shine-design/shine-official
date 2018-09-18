@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import Clipboard from 'clipboard';
 
-import Prism from 'prismjs';
+import Prism from '../../../plugins/prism/prism';
 import './style.less';
 
 export default class extends Component {
@@ -50,7 +50,7 @@ export default class extends Component {
     }
 
     render() {
-        const {code = '', language = 'javascript'} = this.props;
+        const {code = '', language = 'jsx'} = this.props;
         return (
             <div className="code-highlight">
                 <span className="js-copy-to-clipboard copy-code">复制</span>

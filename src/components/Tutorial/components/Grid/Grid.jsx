@@ -72,7 +72,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/grid/basic').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                     <p className='title'>偏移量</p>
@@ -112,7 +112,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/grid/offset').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                     <p className='title'>排序</p>
@@ -133,7 +133,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/grid/order').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                     <p className='title'>排列方向</p>
@@ -158,7 +158,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/grid/direction').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                     <p className='title'>主轴对齐方式</p>
@@ -196,7 +196,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/grid/justify').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                     <Note {...{
@@ -248,7 +248,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/grid/align').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                     <Note {...{
@@ -327,7 +327,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/grid/alignContent').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                     <p className='title'>折行策略</p>
@@ -361,7 +361,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/grid/wrap').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                 </Info>

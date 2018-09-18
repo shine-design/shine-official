@@ -102,7 +102,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/button/basic').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
 
@@ -128,7 +128,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/button/style').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                     <p className='title'>渐变按钮</p>
@@ -153,7 +153,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/button/gradient').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                     <p className='title'>按钮尺寸</p>
@@ -178,7 +178,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/button/size').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
 
@@ -226,7 +226,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/button/state').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
 
@@ -258,7 +258,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/button/block').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                     <p className='title'>阴影效果</p>
@@ -295,7 +295,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/button/air').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                     <p className='title'>图标按钮</p>
@@ -333,7 +333,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/button/icon').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
 
@@ -364,7 +364,7 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/button/event').default,
-                            language: 'markup'
+                            language: 'jsx'
                         }
                     }}/>
                 </Info>
