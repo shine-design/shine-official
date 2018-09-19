@@ -1,7 +1,5 @@
-export default
-`
+export default `
 <Form>
-
     <Input {...{
         label: '普通文本',
         type: 'text',
@@ -51,5 +49,25 @@ export default
         defaultValue:new Date().format('yyyy-MM-dd')
     }}/>
     
+    <Input {...{
+        label: '多行文本',
+        type: 'textarea',
+        placeholder: '请输入文本内容',
+        defaultValue: '你好，Shine Design',
+        attributes: {
+            rows: 3
+        }
+    }}/>
+    
+    <Input {...{
+        label: '文件上传',
+        type: 'file'
+    }}/>
+    
+    <Input {...{
+        label: '静态内容',
+        type: 'static',
+        defaultValue:'你好，Shine Design'
+    }}/>
 </Form>
 `
