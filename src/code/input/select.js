@@ -23,7 +23,6 @@ export default
             }
         ]
      }}/>
-     
     <Input {...{
         label: '单选控件',
         type: 'select',

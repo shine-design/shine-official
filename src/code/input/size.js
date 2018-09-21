@@ -7,7 +7,6 @@ export default `
         defaultValue:'欢迎使用Shine',
         size: 'sm'
     }}/>
-    
     <Input {...{
         label: '中尺寸',
         type: 'text',
@@ -15,7 +14,6 @@ export default `
         defaultValue:'欢迎使用Shine',
         size: 'sm'
     }}/>
-    
     <Input {...{
         label: '大尺寸',
         type: 'text',

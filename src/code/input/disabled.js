@@ -1,24 +1,24 @@
 export default `
 <Form>
     <Input {...{
-        label: '直角边框',
+        label: '正常输入',
         type: 'text',
         placeholder: '请输入内容',
-        defaultValue:'欢迎使用Shine',
-        inputStyle: 'square'
+        defaultValue: '欢迎使用Shine'
     }}/>
     <Input {...{
-        label: '圆角边框',
+        label: '禁止输入',
         type: 'text',
         placeholder: '请输入内容',
-        defaultValue:'欢迎使用Shine'
+        defaultValue: '欢迎使用Shine',
+        disabled: true
     }}/>
     <Input {...{
-        label: '环形边框',
+        label: '只读输入',
         type: 'text',
         placeholder: '请输入内容',
-        defaultValue:'欢迎使用Shine',
-        inputStyle: 'pill'
-    }}/>
+        defaultValue: '欢迎使用Shine',
+        readOnly: true
+    }}/>    
 </Form>
 `

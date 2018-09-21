@@ -48,10 +48,10 @@ export default class Menu extends Component {
             <Fragment>
                 <ul className="menu menu-dark sf-menu js-menu">
                     <li>
-                        <a href="/guide">快速入门</a>
+                        <a href="">快速入门</a>
                         <ul>
                             <li>
-                                <NavLink to='/cli'>初始化</NavLink>
+                                <NavLink to='/guide'>教程</NavLink>
                             </li>
                             <li>
                                 <NavLink to='/cli'>构建工具</NavLink>

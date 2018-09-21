@@ -6,8 +6,18 @@ import APITable from '../../../common/APITable/APITable';
 
 import {Col, Row, Form, Input} from 'shinec';
 import {Button} from "../Button/Button";
+import {NavLink} from "react-router-dom";
+
+import './style.less';
 
 export default class extends Component {
+
+    _renderEvent(e) {
+        const _dom = document.querySelector('.displayBox');
+        _dom.innerHTML += ('<p>' + (new Date()).format('yyyy-MM-dd hh:mm:ss') + '您触发了' + e.type + '事件，输入内容为' + e.target.value + '</p>');
+        _dom.scrollTop = _dom.scrollHeight;
+    }
+
     render() {
         return (
             <Fragment>
@@ -310,7 +320,7 @@ export default class extends Component {
                                                 type: 'text',
                                                 placeholder: '请输入内容',
                                                 defaultValue: '欢迎使用Shine',
-                                                isSolid:true
+                                                isSolid: true
                                             }}/>
                                         </Form>
                                     </Col>
@@ -319,6 +329,108 @@ export default class extends Component {
                         ),
                         code: {
                             code: require('../../../../code/input/solid').default,
+                            language: 'jsx'
+                        }
+                    }}/>
+                    <p className='title'>Disabled & Readonly</p>
+                    <p>输入组件支持设置 只读 属性或 禁止 属性，该属性可以限制用户的聚焦或写入行为。</p>
+                    <Example {...{
+                        className: ['demo-input'],
+                        display: (
+                            <Fragment>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={8} offset={2}>
+                                        <Form>
+                                            <Input {...{
+                                                label: '正常输入',
+                                                type: 'text',
+                                                placeholder: '请输入内容',
+                                                defaultValue: '欢迎使用Shine'
+                                            }}/>
+                                            <Input {...{
+                                                label: '禁止输入',
+                                                type: 'text',
+                                                placeholder: '请输入内容',
+                                                defaultValue: '欢迎使用Shine',
+                                                disabled: true
+                                            }}/>
+                                            <Input {...{
+                                                label: '只读输入',
+                                                type: 'text',
+                                                placeholder: '请输入内容',
+                                                defaultValue: '欢迎使用Shine',
+                                                readOnly: true
+                                            }}/>
+                                        </Form>
+                                    </Col>
+                                </Row>
+                            </Fragment>
+                        ),
+                        code: {
+                            code: require('../../../../code/input/disabled').default,
+                            language: 'jsx'
+                        }
+                    }}/>
+                    <p className='title'>展示类型</p>
+                    <p>输入组件支持 <code>block</code> 类型或 <code>inline</code>类型展示，当为 <code>inline</code> 类型时可以设置划分比例。</p>
+                    <Example {...{
+                        className: ['demo-input'],
+                        display: (
+                            <Fragment>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={8} offset={2}>
+                                        <Form>
+                                            <Input {...{
+                                                label: '块妆输入',
+                                                type: 'text',
+                                                placeholder: '请输入内容',
+                                                defaultValue: '欢迎使用Shine'
+                                            }}/>
+                                            <Input {...{
+                                                label: '行间输入',
+                                                type: 'text',
+                                                display: 'inline',
+                                                labelCount: 2,
+                                                placeholder: '请输入内容',
+                                                defaultValue: '欢迎使用Shine'
+                                            }}/>
+                                        </Form>
+                                    </Col>
+                                </Row>
+                            </Fragment>
+                        ),
+                        code: {
+                            code: require('../../../../code/input/display').default,
+                            language: 'jsx'
+                        }
+                    }}/>
+                    <p className='title'>事件系统</p>
+                    <p>按钮组件支持合成事件系统，请参考<NavLink to='/tutorial/event'>相关资料</NavLink>。</p>
+                    <Example {...{
+                        className: ['demo-input'],
+                        display: (
+                            <Fragment>
+                                <Row className={['helper', 'mb10', 'demo']}>
+                                    <Col part={12}>
+                                        <Input {...{
+                                            label: '事件测试',
+                                            type: 'text',
+                                            placeholder: '请输入内容',
+                                            callbacks: {
+                                                onFocus: this._renderEvent,
+                                                onBlur: this._renderEvent,
+                                                onChange: this._renderEvent
+                                            }
+                                        }}/>
+                                    </Col>
+                                    <Col part={12}>
+                                        <div className='displayBox'/>
+                                    </Col>
+                                </Row>
+                            </Fragment>
+                        ),
+                        code: {
+                            code: require('../../../../code/input/event').default,
                             language: 'jsx'
                         }
                     }}/>

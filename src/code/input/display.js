@@ -1,17 +1,18 @@
 export default `
 <Form>
     <Input {...{
-        label: '透明输入',
+        label: '块妆输入',
         type: 'text',
         placeholder: '请输入内容',
-        defaultValue:'欢迎使用Shine'
+        defaultValue: '欢迎使用Shine'
     }}/>
     <Input {...{
-        label: '反色输入',
+        label: '行间输入',
         type: 'text',
+        display: 'inline',
+        labelCount: 2,
         placeholder: '请输入内容',
-        defaultValue:'欢迎使用Shine'
+        defaultValue: '欢迎使用Shine'
     }}/>
-    
 </Form>
 `

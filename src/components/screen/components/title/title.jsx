@@ -12,9 +12,9 @@ export default class Language extends Component {
                     <h2 className="page-description">为开发者、设计师和产品经理准备的 UI 设计语言</h2>
                 </div>
                 <div className="header-back-buttons helper center">
-                    <a href="" className="button stroke rounded large green">开始使用</a>
-                    <a href="https://github.com/qulongjun/Omega-UI" rel='noopener noreferrer' target='_blank'
-                       className="button stroke rounded large blue-light">GitHub</a>
+                    <a href="" className="button no-border rounded large blue-light">开始使用</a>
+                    <a href="//github.com/shine-design/shine-design" rel='noopener noreferrer' target='_blank'
+                       className="button stroke rounded large blue-light">查看源码</a>
                 </div>
             </Fragment>
         )
