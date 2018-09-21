@@ -46,12 +46,12 @@ export default class Menu extends Component {
     render() {
         return (
             <Fragment>
-                <ul className="menu menu-light sf-menu js-menu">
+                <ul className="menu menu-dark sf-menu js-menu">
                     <li>
-                        <a href="/guide">快速入门</a>
+                        <a href="">快速入门</a>
                         <ul>
                             <li>
-                                <NavLink to='/cli'>初始化</NavLink>
+                                <NavLink to='/guide'>教程</NavLink>
                             </li>
                             <li>
                                 <NavLink to='/cli'>构建工具</NavLink>
@@ -63,9 +63,6 @@ export default class Menu extends Component {
                                 <NavLink to='/style'>代码风格</NavLink>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <NavLink to='/demo'>官方示例</NavLink>
                     </li>
                     <li>
                         <NavLink to='/tutorial'>组件文档</NavLink>

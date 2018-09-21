@@ -20,7 +20,7 @@ export default class Language extends Component {
     render() {
         return (
             <Fragment>
-                <div className="languages languages-light js-languages">
+                <div className="languages js-languages">
 							<span className="language-active js-language-active">简体中文
 								<i className="fa fa-angle-down"/>
 							</span>

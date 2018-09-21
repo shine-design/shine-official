@@ -101,7 +101,7 @@ export default class Language extends Component {
     render() {
         return (
             <Fragment>
-                <div className="header-back-light header-back-default header-back-full-page js-full-page">
+                <div className="header-back header-back-bg-app header-back-full-page js-full-page">
                     <div className="header-back-container">
                         <div className="container">
                             <div className="row">

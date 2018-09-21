@@ -29,10 +29,11 @@ export default class extends Component {
 
 
     render() {
-        const {code, display} = this.props;
+        const {code, display, className = []} = this.props;
         return (
             <Fragment>
-                <div ref='example' className="tabs js-tabs code-highlight-tabs code-highlight-tabs-center">
+                <div ref='example'
+                     className={'tabs js-tabs code-highlight-tabs code-highlight-tabs-center ' + className.join(' ')}>
                     <h4 className="tab-title">
                         <i className="fa fa-cube"/>示例
                     </h4>

@@ -5,7 +5,7 @@ import {Route, Switch} from 'react-router-dom'
 import Home from './components/home/home';
 import Guide from './components/Guide/Guide';
 import Changelog from './components/changelog/changelog';
-import Tutorial from './components/tutorial/tutorial';
+import Tutorial from './components/Tutorial/Tutorial';
 import CLI from './components/CLI/CLI';
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
@@ -31,7 +31,7 @@ export default class App extends Component {
                         <Route path="/cli" exact component={CLI}/>
                         <Route path="/guide" exact component={Guide}/>
                         <Route path="/changelog" exact component={Changelog}/>
-                        <Route path="/tutorial" exact component={Tutorial}/>
+                        <Route path="/tutorial" component={Tutorial}/>
                     </Switch>
                     <Footer/>
                 </div>

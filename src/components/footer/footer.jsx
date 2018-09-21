@@ -33,20 +33,20 @@ export default class Footer extends Component {
         var currentBtn = scope.find('.js-docs-current-version');
         var versionList = scope.find('.js-docs-version-list');
 
-        if(scope.length){
+        if (scope.length) {
             currentBtn.click(function (e) {
                 e.preventDefault();
                 e.stopPropagation();
 
-                if(versionList.is(':visible')){
+                if (versionList.is(':visible')) {
                     versionList.fadeOut('fast');
-                }else{
+                } else {
                     versionList.fadeIn('fast');
                 }
             });
 
-            $('body').click(function() {
-                if(versionList.is(':visible')){
+            $('body').click(function () {
+                if (versionList.is(':visible')) {
                     versionList.fadeOut('fast');
                 }
             });
@@ -55,10 +55,23 @@ export default class Footer extends Component {
 
         var scrollButton = $('.js-scroll-top');
 
-        scrollButton.click(function(e) {
+        scrollButton.click(function (e) {
             e.preventDefault();
-            $("html, body").animate({ scrollTop: "0px" });
+            $("html, body").animate({scrollTop: "0px"});
         });
+
+        function isScroll() {
+            if ($(window).scrollTop() === 0) {
+                // scrollButton.addClass('hidden');
+                scrollButton.fadeOut();
+            } else {
+                // scrollButton.removeClass('hidden');
+                scrollButton.fadeIn();
+            }
+        }
+
+        isScroll();
+        $(window).on('scroll', isScroll);
 
 
     }
@@ -67,63 +80,103 @@ export default class Footer extends Component {
         return (
             <Fragment>
                 <footer className="js-footer-is-fixed">
+                    <div className="footer-extended">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-md-12">
+                                    <div className="footer-extended-container">
+                                        <div className="row justify-content-center">
+                                            <div className="col-md-2 col-sm-2 col-xs-4">
+                                                <div className="footer-extended-menu">
+                                                    <h5 className="footer-extended-menu-title">关于</h5>
+                                                    <ul className="footer-extended-menu-list">
+                                                        <li>
+                                                            <a href="#">团队介绍</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">最新消息</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">更新日志</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">联系我们</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-2 col-sm-2 col-xs-4">
+                                                <div className="footer-extended-menu">
+                                                    <h5 className="footer-extended-menu-title">下载</h5>
+                                                    <ul className="footer-extended-menu-list">
+                                                        <li>
+                                                            <a href="//github.com/shine-design/shine-design/releases">发布版本</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="//github.com/shine-design/shine-design">源代码</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="//github.com/shine-design/shine-design/blob/master/LICENSE">License</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="//www.npmjs.com/package/shined">NPM</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-2 col-sm-2 col-xs-4">
+                                                <div className="footer-extended-menu">
+                                                    <h5 className="footer-extended-menu-title">文档</h5>
+                                                    <ul className="footer-extended-menu-list">
+                                                        <li>
+                                                            <a href="#">新手指南</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">组件文档</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">API 库</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">FAQ</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div className="clearfix visible-xs-block"/>
+                                            <div className="col-md-2 col-sm-2 col-xs-4">
+                                                <div className="footer-extended-menu">
+                                                    <h5 className="footer-extended-menu-title">社区支持</h5>
+                                                    <ul className="footer-extended-menu-list">
+                                                        <li>
+                                                            <a href="//github.com/shine-design/shine-design/issues">反馈建议</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/contribute">贡献指南</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="//zh.wikipedia.org/wiki/Shine_Design">Wiki</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="footer">
                         <div className="container">
                             <div className="row">
-                                <div className="col-md-3 col-sm-3 col-xs-12">
-                                    <div className="footer-logo-wrapper">
-                                        <a href="index.html" className="logo-image ">
-                                            <img src={logo} alt="logo"/>
-                                        </a>
-                                        <p className="slogan">
-                                            <br/>Omega Design
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="col-md-9 col-sm-9 col-xs-12">
+                                <div className="col-md-12 col-sm-12 col-xs-12">
                                     <div className="footer-wrapper">
-                                        <span className="scroll-top js-scroll-top">
-									<i className="fa fa-angle-up"/>
-								</span>
-                                        <div className="docs-version js-docs-version">
-                                            <span className="docs-current-version js-docs-current-version">v3.5</span>
-                                            <ul className="js-docs-version-list">
-                                                <li>
-                                                    <a href="let">1.0</a>
-                                                </li>
-                                                <li>
-                                                    <a href="let">1.5</a>
-                                                </li>
-                                                <li>
-                                                    <a href="let">2.5</a>
-                                                </li>
-                                                <li>
-                                                    <a href="let">3.0</a>
-                                                </li>
-                                                <li>
-                                                    <a href="let">3.1</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <ul className="footer-menu helper right">
-                                            <li>
-                                                <a href="let"> About us </a>
-                                            </li>
-                                            <li>
-                                                <a href="let"> Privacy Policy </a>
-                                            </li>
-                                            <li>
-                                                <a href="let"> Terms & Condotions </a>
-                                            </li>
-                                            <li>
-                                                <a href="let"> My account </a>
-                                            </li>
-                                            <li>
-                                                <a href="let"> Support service </a>
-                                            </li>
-                                        </ul>
-                                        <p className="copyright helper right">
-                                            <a href="http://vsart.me">Longjun.Qu</a>, All Rights reserved. 2018 &copy;
+                                        <span className="scroll-top js-scroll-top hidden">
+                                            <i className="fa fa-angle-up"/>
+                                        </span>
+                                        <p className="copyright helper center">
+                                            Copyright &copy; 2018 · Shine Design · All Rights Reserved <br/>
+                                            <a href="http://www.miitbeian.gov.cn/"> 苏ICP备16022318号 </a>
                                         </p>
                                     </div>
                                 </div>

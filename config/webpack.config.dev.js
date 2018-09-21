@@ -88,6 +88,7 @@ module.exports = {
             // Support React Native Web
             // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
             'react-native': 'react-native-web',
+            'shine': paths.libSrc
         },
         plugins: [
             // Prevents users from importing files from outside of src/ (or node_modules/).
@@ -95,7 +96,7 @@ module.exports = {
             // To fix this, we prevent you from importing files out of src/ -- if you'd like to,
             // please link the files into your node_modules/ and let module-resolution kick in.
             // Make sure your source files are compiled, as they will not be processed in any way.
-            new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
+            // new ModuleScopePlugin(paths.appSrc,paths.libSrc, [paths.appPackageJson]),
         ],
     },
     module: {
@@ -107,21 +108,6 @@ module.exports = {
 
             // First, run the linter.
             // It's important to do this before Babel processes the JS.
-            {
-                test: /\.(js|jsx|mjs)$/,
-                enforce: 'pre',
-                use: [
-                    {
-                        options: {
-                            formatter: eslintFormatter,
-                            eslintPath: require.resolve('eslint'),
-
-                        },
-                        loader: require.resolve('eslint-loader'),
-                    },
-                ],
-                include: paths.appSrc,
-            },
             {
                 // "oneOf" will traverse all following loaders until one will
                 // match the requirements. When no loader matches it will fall
@@ -141,7 +127,7 @@ module.exports = {
                     // Process JS with Babel.
                     {
                         test: /\.(js|jsx|mjs)$/,
-                        include: paths.appSrc,
+                        // include: paths.appSrc,
                         loader: require.resolve('babel-loader'),
                         options: {
 
@@ -157,7 +143,7 @@ module.exports = {
                     // In production, we use a plugin to extract that CSS to a file, but
                     // in development "style" loader enables hot editing of CSS.
                     {
-                        test: /\.(css|less)$/,
+                        test: /\.css$/,
                         use: [
                             require.resolve('style-loader'),
                             {
@@ -185,14 +171,23 @@ module.exports = {
                                         }),
                                     ],
                                 },
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        test: /\.less$/,
+                        use: [require.resolve('style-loader'),
                             {
+                                loader: require.resolve('css-loader'),
+                                options: {
+                                    importLoaders: 1,
+                                },
+                            }, {
                                 loader: require.resolve('less-loader'), // compiles Less to CSS
                                 options: {
                                     javascriptEnabled: true
                                 }
-                            },
-                        ],
+                            }]
                     },
                     // "file" loader makes sure those assets get served by WebpackDevServer.
                     // When you `import` an asset, you get its (virtual) filename.

@@ -7,7 +7,7 @@ export default class LOGO extends Component {
         return (
             <Fragment>
                 <a href="/" className="logo-image logo-animated">
-                    <img src={require('../../../../assets/images/logos/logo-light.png')} alt="logo"/>
+                    <img src={require('../../../../assets/images/logos/logo.png')} alt="logo"/>
                 </a>
             </Fragment>
         )

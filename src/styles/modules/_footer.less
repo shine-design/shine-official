@@ -1,5 +1,5 @@
 .footer{
-	padding: 40px 0;
+	padding: 10px 0;
 	background-color: @color_grey-lighter;
 	position: relative;
 }
@@ -19,6 +19,11 @@
 
 	a{
 		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -35,23 +40,27 @@
 
 .footer-wrapper{
 	position: relative;
-	padding-right: 100px;
+	padding-right: 50px;
 }
 
 .scroll-top{
-	position: absolute;
+	position: fixed;
 	height: 40px;
 	width: 40px;
 	border-radius: 3px;
 	border: 1px solid @color_grey-light;
 	color: darken(@color_grey-dark, 10%);
-	right: 0;
-	top: 2px;
+	right: 50px;
+	bottom: 50px;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 38px;
 	cursor: pointer;
 	font-size: 18px;
+
+	&.hidden{
+		display:none;
+	}
 }
 
 .footer-menu{
@@ -135,9 +144,9 @@
 			left: 17px;
 			height: 5px;
 			width: 5px;
-			.transform(rotate(45deg));	
+			.transform(rotate(45deg));
 		}
-		
+
 		li{
 			line-height: 38px;
 			height: 40px;
