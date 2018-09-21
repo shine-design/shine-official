@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import logo from '../../assets/images/logos/logo.png';
+import {NavLink} from "react-router-dom";
 import './style.less';
 
 export default class Footer extends Component {
@@ -129,16 +129,16 @@ export default class Footer extends Component {
                                                     <h5 className="footer-extended-menu-title">文档</h5>
                                                     <ul className="footer-extended-menu-list">
                                                         <li>
-                                                            <a href="#">新手指南</a>
+                                                            <NavLink to='/guide'>新手指南</NavLink>
                                                         </li>
                                                         <li>
-                                                            <a href="#">组件文档</a>
+                                                            <NavLink to='/tutorial'>组件文档</NavLink>
                                                         </li>
                                                         <li>
-                                                            <a href="#">API 库</a>
+                                                            <NavLink to='/api'>API 库</NavLink>
                                                         </li>
                                                         <li>
-                                                            <a href="#">FAQ</a>
+                                                            <NavLink to='/faq'>FAQ</NavLink>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -152,7 +152,7 @@ export default class Footer extends Component {
                                                             <a href="//github.com/shine-design/shine-design/issues">反馈建议</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/contribute">贡献指南</a>
+                                                            <NavLink to='/contribute'>贡献指南</NavLink>
                                                         </li>
                                                         <li>
                                                             <a href="//zh.wikipedia.org/wiki/Shine_Design">Wiki</a>

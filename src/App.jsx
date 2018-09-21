@@ -9,6 +9,7 @@ import Tutorial from './components/Tutorial/Tutorial';
 import CLI from './components/CLI/CLI';
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
+import Contribute from './components/Contribute/Contribute';
 
 export default class App extends Component {
     componentDidMount() {
@@ -32,6 +33,7 @@ export default class App extends Component {
                         <Route path="/guide" exact component={Guide}/>
                         <Route path="/changelog" exact component={Changelog}/>
                         <Route path="/tutorial" component={Tutorial}/>
+                        <Route path="/contribute" component={Contribute}/>
                     </Switch>
                     <Footer/>
                 </div>
