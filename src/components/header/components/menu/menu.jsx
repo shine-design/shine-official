@@ -48,30 +48,22 @@ export default class Menu extends Component {
             <Fragment>
                 <ul className="menu menu-dark sf-menu js-menu">
                     <li>
-                        <a href="">快速入门</a>
-                        <ul>
-                            <li>
-                                <NavLink to='/guide'>新手指南</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/cli'>构建工具</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/api'>API文档</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/contribute'>贡献指南</NavLink>
-                            </li>
-                        </ul>
+                        <NavLink to='/'>首页</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/guide'>新手入门</NavLink>
                     </li>
                     <li>
                         <NavLink to='/tutorial'>组件文档</NavLink>
                     </li>
                     <li>
+                        <NavLink to='/cli'>构建工具</NavLink>
+                    </li>
+                    <li>
                         <NavLink to='/changelog'>更新日志</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/contact'>联系作者</NavLink>
+                        <NavLink to='/contribute'>贡献指南</NavLink>
                     </li>
                 </ul>
             </Fragment>

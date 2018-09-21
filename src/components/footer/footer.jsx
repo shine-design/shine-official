@@ -91,13 +91,10 @@ export default class Footer extends Component {
                                                     <h5 className="footer-extended-menu-title">关于</h5>
                                                     <ul className="footer-extended-menu-list">
                                                         <li>
-                                                            <a href="#">团队介绍</a>
+                                                            <a href="#">开发手记</a>
                                                         </li>
                                                         <li>
-                                                            <a href="#">最新消息</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">更新日志</a>
+                                                            <NavLink to='/changelog'>更新日志</NavLink>
                                                         </li>
                                                         <li>
                                                             <a href="#">联系我们</a>
@@ -110,16 +107,20 @@ export default class Footer extends Component {
                                                     <h5 className="footer-extended-menu-title">下载</h5>
                                                     <ul className="footer-extended-menu-list">
                                                         <li>
-                                                            <a href="//github.com/shine-design/shine-design/releases">发布版本</a>
+                                                            <a target='_blank'
+                                                               href="//github.com/shine-design/shine-design/releases">发布版本</a>
                                                         </li>
                                                         <li>
-                                                            <a href="//github.com/shine-design/shine-design">源代码</a>
+                                                            <a target='_blank'
+                                                               href="//github.com/shine-design/shine-design">源代码</a>
                                                         </li>
                                                         <li>
-                                                            <a href="//github.com/shine-design/shine-design/blob/master/LICENSE">License</a>
+                                                            <a target='_blank'
+                                                               href="//github.com/shine-design/shine-design/blob/master/LICENSE">License</a>
                                                         </li>
                                                         <li>
-                                                            <a href="//www.npmjs.com/package/shined">NPM</a>
+                                                            <a target='_blank'
+                                                               href="//www.npmjs.com/package/shined">NPM</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -129,13 +130,10 @@ export default class Footer extends Component {
                                                     <h5 className="footer-extended-menu-title">文档</h5>
                                                     <ul className="footer-extended-menu-list">
                                                         <li>
-                                                            <NavLink to='/guide'>新手指南</NavLink>
+                                                            <NavLink to='/guide'>新手入门</NavLink>
                                                         </li>
                                                         <li>
                                                             <NavLink to='/tutorial'>组件文档</NavLink>
-                                                        </li>
-                                                        <li>
-                                                            <NavLink to='/api'>API 库</NavLink>
                                                         </li>
                                                         <li>
                                                             <NavLink to='/faq'>FAQ</NavLink>
@@ -149,13 +147,15 @@ export default class Footer extends Component {
                                                     <h5 className="footer-extended-menu-title">社区支持</h5>
                                                     <ul className="footer-extended-menu-list">
                                                         <li>
-                                                            <a href="//github.com/shine-design/shine-design/issues">反馈建议</a>
+                                                            <a target='_blank'
+                                                               href="//github.com/shine-design/shine-design/issues">反馈建议</a>
                                                         </li>
                                                         <li>
                                                             <NavLink to='/contribute'>贡献指南</NavLink>
                                                         </li>
                                                         <li>
-                                                            <a href="//zh.wikipedia.org/wiki/Shine_Design">Wiki</a>
+                                                            <a target='_blank'
+                                                               href="//zh.wikipedia.org/wiki/Shine_Design">Wiki</a>
                                                         </li>
                                                     </ul>
                                                 </div>

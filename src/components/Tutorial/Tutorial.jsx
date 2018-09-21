@@ -3,29 +3,13 @@ import Background from '../common/Background/Background';
 import './style.less';
 import {NavLink, Route, Switch} from "react-router-dom";
 
-export default class Tutorial extends Component {
-    componentDidMount() {
-        // let menus = $('.js-menu-vertical');
-        // menus.each(function () {
-        //     let menu = $(this);
-        //     menu.find('li').each(function () {
-        //         if ($(this).has('ul').length) {
-        //             $(this).addClass('has-children');
-        //         }
-        //     });
-        //     menu.tendina({
-        //         animate: true,
-        //         activeMenu: '.selected'
-        //     });
-        // });
-    }
-
+export default class extends Component {
 
     render() {
         return (
             <Fragment>
                 <Background {...{
-                    title: '使用教程'
+                    title: '组件文档'
                 }}/>
                 <div id='content'>
                     <div className="container">
@@ -33,6 +17,8 @@ export default class Tutorial extends Component {
                             <div className="col-md-9">
                                 <div className="main-content">
                                     <Switch>
+                                        <Route path="/tutorial/" exact
+                                               component={require('./components/index').default}/>
                                         <Route path="/tutorial/grid" exact
                                                component={require('./components/Grid/Grid').default}/>
                                         <Route path="/tutorial/icon" exact
@@ -68,6 +54,9 @@ export default class Tutorial extends Component {
                                     <nav className="menu-vertical-wrapper">
                                         <ul className="menu-vertical  js-menu-vertical" data-prepend-to=".js-layout"
                                             data-select="Menu">
+                                            <li>
+                                                <NavLink className='selected' to='/tutorial/'>设计理念</NavLink>
+                                            </li>
                                             <li>
                                                 <a className='selected'>布局</a>
                                                 <ul>
