@@ -114,21 +114,6 @@ module.exports = {
             // First, run the linter.
             // It's important to do this before Babel processes the JS.
             {
-                test: /\.(js|jsx|mjs)$/,
-                enforce: 'pre',
-                use: [
-                    {
-                        options: {
-                            formatter: eslintFormatter,
-                            eslintPath: require.resolve('eslint'),
-
-                        },
-                        loader: require.resolve('eslint-loader'),
-                    },
-                ],
-                include: paths.appSrc,
-            },
-            {
                 // "oneOf" will traverse all following loaders until one will
                 // match the requirements. When no loader matches it will fall
                 // back to the "file" loader at the end of the loader list.
@@ -166,57 +151,51 @@ module.exports = {
                     // use the "style" loader inside the async code so CSS from them won't be
                     // in the main CSS file.
                     {
-                        test: /\.(css|less)$/,
-                        loader: ExtractTextPlugin.extract(
-                            Object.assign(
-                                {
-                                    fallback: {
-                                        loader: require.resolve('style-loader'),
-                                        options: {
-                                            hmr: false,
-                                        },
-                                    },
-                                    use: [
-                                        {
-                                            loader: require.resolve('css-loader'),
-                                            options: {
-                                                importLoaders: 1,
-                                                minimize: true,
-                                                sourceMap: shouldUseSourceMap,
-                                            },
-                                        },
-                                        {
-                                            loader: require.resolve('postcss-loader'),
-                                            options: {
-                                                // Necessary for external CSS imports to work
-                                                // https://github.com/facebookincubator/create-react-app/issues/2677
-                                                ident: 'postcss',
-                                                plugins: () => [
-                                                    require('postcss-flexbugs-fixes'),
-                                                    autoprefixer({
-                                                        browsers: [
-                                                            '>1%',
-                                                            'last 4 versions',
-                                                            'Firefox ESR',
-                                                            'not ie < 9', // React doesn't support IE8 anyway
-                                                        ],
-                                                        flexbox: 'no-2009',
-                                                    }),
-                                                ],
-                                            },
-                                        },
-                                        {
-                                            loader: require.resolve('less-loader'), // compiles Less to CSS
-                                            options: {
-                                                javascriptEnabled: true
-                                            }
-                                        }
+                        test: /\.css$/,
+                        use: [
+                            require.resolve('style-loader'),
+                            {
+                                loader: require.resolve('css-loader'),
+                                options: {
+                                    importLoaders: 1,
+                                },
+                            },
+                            {
+                                loader: require.resolve('postcss-loader'),
+                                options: {
+                                    // Necessary for external CSS imports to work
+                                    // https://github.com/facebookincubator/create-react-app/issues/2677
+                                    ident: 'postcss',
+                                    plugins: () => [
+                                        require('postcss-flexbugs-fixes'),
+                                        autoprefixer({
+                                            browsers: [
+                                                '>1%',
+                                                'last 4 versions',
+                                                'Firefox ESR',
+                                                'not ie < 9', // React doesn't support IE8 anyway
+                                            ],
+                                            flexbox: 'no-2009',
+                                        }),
                                     ],
                                 },
-                                extractTextPluginOptions
-                            )
-                        ),
-                        // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
+                            }
+                        ]
+                    },
+                    {
+                        test: /\.less$/,
+                        use: [require.resolve('style-loader'),
+                            {
+                                loader: require.resolve('css-loader'),
+                                options: {
+                                    importLoaders: 1,
+                                },
+                            }, {
+                                loader: require.resolve('less-loader'), // compiles Less to CSS
+                                options: {
+                                    javascriptEnabled: true
+                                }
+                            }]
                     },
                     // "file" loader makes sure assets end up in the `build` folder.
                     // When you `import` an asset, you get its filename.
