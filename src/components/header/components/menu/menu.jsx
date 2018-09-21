@@ -51,7 +51,7 @@ export default class Menu extends Component {
                         <a href="">快速入门</a>
                         <ul>
                             <li>
-                                <NavLink to='/guide'>教程</NavLink>
+                                <NavLink to='/guide'>新手指南</NavLink>
                             </li>
                             <li>
                                 <NavLink to='/cli'>构建工具</NavLink>
@@ -60,7 +60,7 @@ export default class Menu extends Component {
                                 <NavLink to='/api'>API文档</NavLink>
                             </li>
                             <li>
-                                <NavLink to='/style'>代码风格</NavLink>
+                                <NavLink to='/contribute'>贡献指南</NavLink>
                             </li>
                         </ul>
                     </li>
