@@ -14,7 +14,6 @@ export default class Header extends Component {
                     <Feature/>
                     <Code/>
                     <Demo/>
-                    <Brand/>
                 </div>
             </Fragment>
         )

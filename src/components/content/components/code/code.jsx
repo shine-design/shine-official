@@ -27,7 +27,7 @@ ReactDOM.render(<APP />,document.querySelector('#app'));`;
                 <div className='container'>
                     <div className="promo-title-wrapper ">
                         <h3 className="promo-title"> 使用示例 </h3>
-                        <p className="promo-description"> 我们在开发组件之初，抛弃了繁杂的组件必需配置项，采用了极简的配置策略，开发者无需设置任何参数即可使用默认组件。 </p>
+                        <p className="promo-description"> Shine 抛弃了繁杂的组件必需配置项，采用了极简的配置策略，开发者无需设置任何参数即可使用默认组件。 </p>
                     </div>
                     <div className="row">
                         <div className="col-md-2"></div>
