@@ -8,7 +8,7 @@ import Article from '../common/Article/Article';
 import Step from "../common/Step/Step";
 import Code from "../common/Code/Code";
 import {NavLink} from 'react-router-dom'
-
+import {Button,Row,Col} from 'shinec';
 import './style.less';
 
 export default class  extends Component {
@@ -36,8 +36,9 @@ export default class  extends Component {
                                         <h2>环境搭建</h2>
                                         <p>Shine Design 提供两种搭建开发环境的方式。</p>
                                         <h4>构建工具</h4>
-                                        <p>直接使用集成了 Shine Design 的脚手架工具 <code>Shined-cli</code>，使用该工具可以直接搭建开箱即用的开发环境，相关资料请参考 <NavLink
-                                            to='cli'>构建工具</NavLink> 。</p>
+                                        <p>直接使用集成了 Shine Design
+                                            的脚手架工具 <code>Shined-cli</code>，使用该工具可以直接搭建开箱即用的开发环境，相关资料请参考 <NavLink
+                                                to='cli'>构建工具</NavLink> 。</p>
                                         <h4>手动集成</h4>
                                         <p>手动集成更适合在现有项目中使用 Shine Design
                                             或自定义项目结构的情景，本例以 <code>create-react-app</code> （或其他同类工具）生成的项目作为起点，在此基础上搭建
@@ -56,9 +57,9 @@ export default class  extends Component {
                                                             <p>通过在命令行中执行如下指令创建一个新项目 <code>my-app</code>。</p>
                                                             <Code {...{
                                                                 code: `
-$ create-react-app my-app
+create-react-app my-app
                     `,
-                                                                language: 'markup'
+                                                                language: 'apacheconf'
                                                             }}/>
                                                         </Fragment>
                                                     )
@@ -72,7 +73,8 @@ $ create-react-app my-app
                                                             <Code {...{
                                                                 code: `
 npm install shined
-                    `
+                    `,
+                                                                language: 'apacheconf'
                                                             }}/>
                                                             <blockquote>
                                                                 <p>在 NPM 包中，Shine Design 被命名为 <code>shined</code>。</p>
@@ -90,7 +92,8 @@ npm install shined
                                                                     `
 npm start
 
-`
+`,
+                                                                language: 'apacheconf'
                                                             }}/>
                                                             <p>静待片刻，开发服务器启动成功后，你可以在浏览器中访问 <a
                                                                 href='http://127.0.0.1:8000'>http://127.0.0.1:3000</a> ，当看到欢迎页面时，项目搭建成功。
@@ -109,7 +112,7 @@ npm start
                                         <h2>使用组件</h2>
                                         <p>进入项目 <code>my-app</code> 项目文件夹，访问 <code>src/App.js</code> 文件，并修改该文件：</p>
                                         <Code {...{
-                                            code:`
+                                            code: `
 import React, { Component } from 'react';
 import './App.css';
 
@@ -129,12 +132,19 @@ class App extends Component {
                                         <blockquote>
                                             <p>部分工具创建的项目可能入口文件路径不同，详情可查阅相关文档。</p>
                                         </blockquote>
-                                        <p>刷新页面后，即可出现如下的效果：</p>
-                                        <img className='article-featured-image' src={require('../../assets/images/demo/demo button.png')}/>
+                                        <p>刷新页面后，即可出现如下的按钮：</p>
+                                       <div className='helper mb20 mt20 ml10'>
+                                           <Row>
+                                               <Col part={12}>
+                                                   <Button value='Button'/>
+                                               </Col>
+                                           </Row>
+                                       </div>
                                         <blockquote>
                                             <p>部分脚手架工具未配置 Webpack 热更新，可能需要手动重启服务。</p>
                                         </blockquote>
-                                        <p>至此，Shine Design 组件使用成功，更多组件的使用请参考 <NavLink to='/tutorial'>组件文档</NavLink> 。</p>
+                                        <p>至此，Shine Design 组件使用成功，更多组件的使用请参考 <NavLink to='/tutorial'>组件文档</NavLink> 。
+                                        </p>
                                     </Article>
                                 </div>
                             </div>
