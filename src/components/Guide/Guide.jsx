@@ -24,7 +24,7 @@ export default class  extends Component {
                             <div className="col-md-12">
                                 <div className="main-content">
                                     <Article>
-                                        <p>HI，欢迎来到新手入门，Shine Design 致力于提供给程序员愉悦的开发体验。本文将教你从头搭建一个集成 Shine Design
+                                        <p>HI，欢迎来到新手入门，Shine Design 致力于提供给程序员愉悦的开发体验。本教程将教你如何集成 Shine Design
                                             的开发环境。 </p>
                                         <blockquote>
                                             <p>
@@ -34,17 +34,16 @@ export default class  extends Component {
                                             </p>
                                         </blockquote>
                                         <h2>环境搭建</h2>
-                                        <p>Shine Design 提供两种搭建开发环境的方式。</p>
+                                        <p>Shine Design 提供两种集成开发环境的方式。</p>
                                         <h4>构建工具</h4>
-                                        <p>直接使用集成了 Shine Design
-                                            的脚手架工具 <code>Shined-cli</code>，使用该工具可以直接搭建开箱即用的开发环境，相关资料请参考 <NavLink
+                                        <p>直接使用集成了 Shine Design 开发环境的脚手架工具 <code>Shined-cli</code>，使用该工具可以直接搭建开箱即用的项目，相关资料请参考 <NavLink
                                                 to='cli'>构建工具</NavLink> 。</p>
-                                        <h4>手动集成</h4>
-                                        <p>手动集成更适合在现有项目中使用 Shine Design
-                                            或自定义项目结构的情景，本例以 <code>create-react-app</code> （或其他同类工具）生成的项目作为起点，在此基础上搭建
+                                        <h4>手动构建</h4>
+                                        <p>手动构建更适合在现有项目中集成 Shine Design
+                                            或自定义环境配置的情景，本例以 <code>create-react-app</code> （或其他同类工具）生成的项目作为基础项目，在此基础上集成
                                             Shine Design 开发环境。</p>
                                         <blockquote>
-                                            <p>本例假设你已安装 <code>create-react-app</code> 命令行工具。相关资料参考 <a
+                                            <p>本例假设你已正确安装 <code>create-react-app</code> 命令行工具并熟悉相关命令行指令。相关资料参考 <a
                                                 href='https://github.com/facebook/create-react-app'>create-react-app</a>。
                                             </p>
                                         </blockquote>
@@ -110,7 +109,8 @@ npm start
                                         }}/>
                                         <p>至此，依赖配置成功，开始使用第一个组件吧。</p>
                                         <h2>使用组件</h2>
-                                        <p>进入项目 <code>my-app</code> 项目文件夹，访问 <code>src/App.js</code> 文件，并修改该文件：</p>
+                                        <p>Shine Design 支持按需加载的方式引入组件，同时需要引入样式文件 (<code>index.css</code>) ,样式文件仅需要在入口处引入一次，即可在整个项目中使用。</p>
+                                        <p>以 <code>my-app</code>项目为例，进入项目文件夹，访问 <code>src/App.js</code> 文件，并修改该文件：</p>
                                         <Code {...{
                                             code: `
 import React, { Component } from 'react';
