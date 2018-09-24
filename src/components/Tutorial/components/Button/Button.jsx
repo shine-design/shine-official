@@ -5,7 +5,7 @@ import Info from "../../../common/Info/Info";
 import APITable from '../../../common/APITable/APITable';
 import {NavLink} from "react-router-dom";
 
-import {Col, Row, Button} from 'shinec';
+import {Col, Row, Button} from 'shined';
 
 import './style.less';
 

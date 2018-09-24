@@ -3,7 +3,7 @@ import Example from "../../../common/Example/Example";
 import Note from "../../../common/Note/Note";
 import Info from "../../../common/Info/Info";
 import APITable from '../../../common/APITable/APITable';
-import {Col, Row} from 'shinec';
+import {Col, Row} from 'shined';
 
 import './style.less';
 

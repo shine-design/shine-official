@@ -8,7 +8,7 @@ import Article from '../common/Article/Article';
 import Step from "../common/Step/Step";
 import Code from "../common/Code/Code";
 import {NavLink} from 'react-router-dom'
-import {Button,Row,Col} from 'shinec';
+import {Button,Row,Col} from 'shined';
 import './style.less';
 
 export default class  extends Component {

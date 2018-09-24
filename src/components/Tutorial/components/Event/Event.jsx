@@ -7,7 +7,7 @@ import Code from "../../../common/Code/Code";
 import APITable from '../../../common/APITable/APITable';
 import {NavLink} from "react-router-dom";
 
-import {Col, Row} from 'shinec';
+import {Col, Row} from 'shined';
 
 
 export default class extends Component {

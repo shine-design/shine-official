@@ -37,7 +37,7 @@ export default class extends Component {
                         )
                     }
                     <h4 className="note-title"> {title} </h4>
-                    <p className="note-description"> {message} </p>
+                    <div className="note-description"> {message} </div>
                 </div>
             </Fragment>
         );

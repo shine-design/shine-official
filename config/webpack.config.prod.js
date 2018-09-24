@@ -131,12 +131,21 @@ module.exports = {
                     // Process JS with Babel.
                     {
                         test: /\.(js|jsx|mjs)$/,
-                        include: paths.appSrc,
+                        // include: paths.appSrc,
                         loader: require.resolve('babel-loader'),
                         options: {
 
                             compact: true,
                         },
+                    },
+                    {
+                        test: /\.(png|woff|woff2|svg|ttf|eot)$/,
+                        use: {
+                            loader: 'url-loader',
+                            options: {
+                                limit: 100000,  //这里要足够大这样所有的字体图标都会打包到css中
+                            }
+                        }
                     },
                     // The notation here is somewhat confusing.
                     // "postcss" loader applies autoprefixer to our CSS.

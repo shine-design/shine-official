@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import Info from "../../../common/Info/Info";
 import Example from "../../../common/Example/Example";
 import Note from '../../../common/Note/Note';
-import {Row, Col, Icon} from "shinec";
+import {Row, Col, Icon} from "shined";
 import totalIcon from '../../../../code/icon/total';
 import './style.less';
 

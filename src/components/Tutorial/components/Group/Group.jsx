@@ -5,7 +5,7 @@ import Info from "../../../common/Info/Info";
 import APITable from '../../../common/APITable/APITable';
 import {NavLink} from "react-router-dom";
 
-import {Col, Row, Button, Group} from 'shinec';
+import {Col, Row, Button, Group} from 'shined';
 
 
 export default class extends Component {
@@ -175,7 +175,7 @@ export default class extends Component {
                             language: 'markup'
                         }
                     }}/>
-
+                
                     <p className='title'>按钮组尺寸</p>
                     <p>使用 <code>size</code> 属性可以定义按钮组尺寸。
                     </p>

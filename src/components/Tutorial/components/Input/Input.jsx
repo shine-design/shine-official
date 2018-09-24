@@ -4,7 +4,7 @@ import Note from "../../../common/Note/Note";
 import Info from "../../../common/Info/Info";
 import APITable from '../../../common/APITable/APITable';
 
-import {Col, Row, Form, Input} from 'shinec';
+import {Col, Row, Form, Input} from 'shined';
 import {Button} from "../Button/Button";
 import {NavLink} from "react-router-dom";
 

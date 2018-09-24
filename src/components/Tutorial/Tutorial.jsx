@@ -30,7 +30,8 @@ export default class extends Component {
 
                                         <Route path="/tutorial/input" exact
                                                component={require('./components/Input/Input').default}/>
-
+                                        <Route path="/tutorial/check" exact
+                                               component={require('./components/Check/Check').default}/>
                                         <Route path="/tutorial/event" exact
                                                component={require('./components/Event/Event').default}/>
                                         <Route path="/tutorial/group" exact
@@ -92,7 +93,7 @@ export default class extends Component {
                                                         <NavLink to='/tutorial/input'>输入</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/checkbox'>选框</NavLink>
+                                                        <NavLink to='/tutorial/check'>选框</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
