@@ -48,8 +48,18 @@ export default class extends Component {
                                                 type: 'radio',
                                                 radioList: [
                                                     {
-                                                        text: 'aaa',
+                                                        text: 'Default',
                                                         defaultValue: 'bbb',
+                                                    },
+                                                    {
+                                                        text: 'Disabled',
+                                                        defaultValue: 'bbb',
+                                                        disabled: true
+                                                    },
+                                                    {
+                                                        text: 'Checked',
+                                                        defaultValue: 'bbb',
+                                                        checked: true
                                                     }
                                                 ],
                                                 placeholder: '请输入内容',
