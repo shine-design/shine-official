@@ -93,7 +93,7 @@ export default class extends Component {
                                                         <NavLink to='/tutorial/input'>输入</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/check'>选框</NavLink>
+                                                        <NavLink to='/tutorial/check'>单复选框</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>

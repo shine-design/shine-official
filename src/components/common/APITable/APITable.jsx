@@ -1,9 +1,13 @@
 import React, {Component, Fragment} from 'react';
 
 export default class extends Component {
+    static defaultProps = {
+        className: true,
+        attribute: false
+    };
 
     render() {
-        const {data, custom} = this.props;
+        const {data, attribute, className, custom} = this.props;
         return (
             <Fragment>
                 <div className="table-responsive">
@@ -13,7 +17,7 @@ export default class extends Component {
                             <th width="5%" className='helper center'>参数</th>
                             <th width="40%">说明</th>
                             <th width="15%" className='helper center'>类型</th>
-                            <th width="30%">可选值</th>
+                            <th width="30%">可选项</th>
                             <th width="10%">默认值</th>
                         </tr>
                         </thead>
@@ -26,7 +30,7 @@ export default class extends Component {
                                             items.map((item, index) => {
                                                 return (
                                                     <td key={index}
-                                                        className={index === 3 || index === 1 ? 'helper left' : null}>
+                                                        className={index === 1  ? 'helper left' : null}>
                                                         {item}
                                                     </td>
                                                 )
@@ -36,13 +40,28 @@ export default class extends Component {
                                 )
                             })
                         }
-                        <tr>
-                            <td>className</td>
-                            <td className='helper left'>自定义类修饰符</td>
-                            <td>String / Array</td>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
+                        {
+                            className && (
+                                <tr>
+                                    <td>className</td>
+                                    <td className='helper left'>自定义类修饰符，指定修饰符会被追加于容器上</td>
+                                    <td>String / Array</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            )
+                        }
+                        {
+                            attribute && (
+                                <tr>
+                                    <td>attribute</td>
+                                    <td className='helper left'>自定义属性，指定属性会被设置于容器上</td>
+                                    <td>Object</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            )
+                        }
                         </tbody>
                     </table>
                 </div>

@@ -36,7 +36,11 @@ export default class extends Component {
 							</span>
                         )
                     }
-                    <h4 className="note-title"> {title} </h4>
+                    {
+                        title && (
+                            <h4 className="note-title"> {title} </h4>
+                        )
+                    }
                     <div className="note-description"> {message} </div>
                 </div>
             </Fragment>
