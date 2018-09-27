@@ -90,7 +90,7 @@ export default class extends Component {
                                                 <a className='selected'>表单</a>
                                                 <ul>
                                                     <li>
-                                                        <NavLink to='/tutorial/input'>输入</NavLink>
+                                                        <NavLink to='/tutorial/input'>基础输入</NavLink>
                                                     </li>
                                                     <li>
                                                         <NavLink to='/tutorial/check'>单复选框</NavLink>

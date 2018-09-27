@@ -392,13 +392,10 @@ export default class extends Component {
                             ['isAir', '定义按钮是否显示阴影样式', 'Boolean', 'true / false', 'false'],
                             ['isRetina', '定义按钮是否显示两倍分辨率样式', 'Boolean', 'true / false', 'false'],
                             ['iconName', '定义按钮显示的图标类型', 'String', '-', '-'],
-                        ]
+                        ],
+                        attribute: true,
+                        callback: true
                     }}/>
-                </Info>
-                <Info {...{
-                    description: '事件系统'
-                }}>
-                    <p>按钮组件支持合成事件系统，请参考<NavLink to='/tutorial/event'>相关资料</NavLink>。</p>
                 </Info>
             </Fragment>
         );

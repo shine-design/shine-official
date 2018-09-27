@@ -1,13 +1,15 @@
 import React, {Component, Fragment} from 'react';
+import {NavLink} from "react-router-dom";
 
 export default class extends Component {
     static defaultProps = {
         className: true,
-        attribute: false
+        attribute: false,
+        callback: false
     };
 
     render() {
-        const {data, attribute, className, custom} = this.props;
+        const {data, attribute, className, callback, custom} = this.props;
         return (
             <Fragment>
                 <div className="table-responsive">
@@ -30,7 +32,7 @@ export default class extends Component {
                                             items.map((item, index) => {
                                                 return (
                                                     <td key={index}
-                                                        className={index === 1  ? 'helper left' : null}>
+                                                        className={index === 1 ? 'helper left' : null}>
                                                         {item}
                                                     </td>
                                                 )
@@ -58,6 +60,19 @@ export default class extends Component {
                                     <td className='helper left'>自定义属性，指定属性会被设置于容器上</td>
                                     <td>Object</td>
                                     <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            )
+                        }
+                        {
+                            callback && (
+                                <tr>
+                                    <td>callbacks</td>
+                                    <td className='helper left'>该组件支持合成事件系统
+                                    </td>
+                                    <td>Object</td>
+                                    <td>请参考<NavLink
+                                        to='/tutorial/event'>相关资料</NavLink></td>
                                     <td>-</td>
                                 </tr>
                             )

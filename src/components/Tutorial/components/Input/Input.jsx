@@ -352,14 +352,14 @@ export default class extends Component {
                                                 type: 'text',
                                                 placeholder: '请输入内容',
                                                 defaultValue: '欢迎使用Shine',
-                                                disabled: true
+                                                isDisabled: true
                                             }}/>
                                             <Input {...{
                                                 label: '只读输入',
                                                 type: 'text',
                                                 placeholder: '请输入内容',
                                                 defaultValue: '欢迎使用Shine',
-                                                readOnly: true
+                                                isReadOnly: true
                                             }}/>
                                         </Form>
                                     </Col>
@@ -433,6 +433,62 @@ export default class extends Component {
                             code: require('../../../../code/input/event').default,
                             language: 'jsx'
                         }
+                    }}/>
+                </Info>
+                <Info {...{
+                    description: '配置参数'
+                }}>
+                    <APITable {...{
+                        data: [
+                            ['label', '定义基础输入的标签名称', '任意', '-', '-'],
+                            ['id', (<Fragment>
+                                <span>定义基础输入的 <code>id</code> 属性，若不存在，则提供默认值</span>
+                            </Fragment>), 'String / Number', '由算法生成的UUID随机字符串', '-'],
+                            ['type', '定义基础输入的类型，目前支持单选和复选', 'String', 'radio / checkbox', '-'],
+                            ['name', '定义基础输入的名称，若存在多个选项，则共享名称', 'String / Number', '-', '-'],
+                            ['multiple', (<Fragment>
+                                <span>定义基础输入是否允许多选，仅 <code>type</code> 设置为 <code>select</code> 时生效</span>
+                            </Fragment>), 'Boolean', 'true / false', 'false'],
+                            ['options', (<Fragment>
+                                <span>定义基础输入组件中各个选项，仅 <code>type</code> 设置为 <code>select</code> 时生效,选项配置见下表</span>
+                            </Fragment>), 'Array', '-', '-'],
+                            ['placeholder', '定义基础输入的占位内容', '任意', '-', '-'],
+                            ['defaultValue', (<Fragment>
+                                <span>定义基础输入的 <code>value</code> 属性值</span>
+                            </Fragment>), 'String / Number', '-', '-'],
+                            ['inputStyle', '定义基础输入组件的样式', 'String', 'pill / square / normal', 'normal'],
+                            ['paddingSize', '定义基础输入组件的尺寸', 'String', 'lg / sm / md', 'lg'],
+                            ['size', '定义基础输入组件中输入框的尺寸', 'String', 'lg / sm / md', 'lg'],
+                            ['display', '定义当前基础输入组件的排列方式', 'String', 'block / inline', 'block'],
+                            ['labelCount', (<Fragment>
+                                <span>定义当前基础输入组件中标签占的栅格数，相关参数介绍参考<NavLink to='/tutorial/grid'>栅格系统</NavLink></span>
+                            </Fragment>), 'Number', '1 至 12', '3'],
+                            ['isFirst', (<Fragment>
+                                <span>定义当前基础输入组件是否为 <code>Form</code> 表单中第一个组件</span>
+                            </Fragment>), 'Boolean', 'true / false', 'false'],
+                            ['isLast', (<Fragment>
+                                <span>定义当前基础输入组件是否为 <code>Form</code> 表单中最后一个组件</span>
+                            </Fragment>), 'Boolean', 'true / false', 'false'],
+                            ['isDisabled', '定义是否禁用基础输入', 'Boolean', 'true / false', 'false'],
+                            ['isReadOnly', '定义是否只读基础输入', 'Boolean', 'true / false', 'false'],
+                            ['isSolid', '定义是否反色显示基础输入', 'Boolean', 'true / false', 'false'],
+                            ['isAir', '定义是否阴影显示基础输入', 'Boolean', 'true / false', 'false'],
+                            ['helper', '定义基础输入的提示语', '任意', '-', '-'],
+                        ],
+                        attribute: true,
+                        callback: true
+                    }}/>
+                    <p className='title'>选项配置</p>
+                    <APITable {...{
+                        data: [
+                            ['value', (<Fragment>
+                                <span>定义选项的 <code>value</code> 属性</span>
+                            </Fragment>), 'String / Number', '-', '-'],
+                            ['label', '定义选项的展示名称', '任意', '-', '-'],
+                            ['isChecked', '定义是否选中当前选项，一个选项列表里仅可设置一个该属性', 'Boolean', 'true / false', 'false'],
+                        ],
+                        attribute: true,
+                        callback: true
                     }}/>
                 </Info>
             </Fragment>

@@ -773,13 +773,9 @@ export default class extends Component {
                             ['isDisabled', '定义是否禁用当前选项', 'Boolean', 'true / false', 'false'],
                             ['isDefaultChecked', '定义是否默认选中当前选项', 'Boolean', 'true / false', 'false']
                         ],
-                        attribute: true
+                        attribute: true,
+                        callback: true
                     }}/>
-                </Info>
-                <Info {...{
-                    description: '事件系统'
-                }}>
-                    <p>按钮组件支持合成事件系统，请参考<NavLink to='/tutorial/event'>相关资料</NavLink>。</p>
                 </Info>
             </Fragment>
         );
