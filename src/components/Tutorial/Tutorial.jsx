@@ -35,6 +35,9 @@ export default class extends Component {
                                         <Route path="/tutorial/symbolInput" exact
                                                component={require('./components/SymbolInput/SymbolInput').default}/>
 
+                                        <Route path="/tutorial/progress" exact
+                                               component={require('./components/Progress/Progress').default}/>
+
                                         <Route path="/tutorial/event" exact
                                                component={require('./components/Event/Event').default}/>
                                         <Route path="/tutorial/group" exact
@@ -95,6 +98,14 @@ export default class extends Component {
                                                     </li>
                                                     <li>
                                                         <NavLink to='/tutorial/symbolInput'>标志输入</NavLink>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a className='selected bolder'>数据</a>
+                                                <ul>
+                                                    <li>
+                                                        <NavLink to='/tutorial/progress'>进度条</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
