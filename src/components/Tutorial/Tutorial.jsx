@@ -82,9 +82,6 @@ export default class extends Component {
                                                     <li>
                                                         <NavLink to='/tutorial/group'>按钮组</NavLink>
                                                     </li>
-                                                    <li>
-                                                        <NavLink to='/tutorial/alert'>警告</NavLink>
-                                                    </li>
                                                 </ul>
                                             </li>
                                             <li>

@@ -29,42 +29,42 @@ class Item extends Component {
                             <a href={'#' + id}>{version}</a>
                         </h3>
                         <p className="changelog-date">{updateData}</p>
-                        <span className="changelog-switch js-changelog-switch"/>
+                        {/*<span className="changelog-switch js-changelog-switch"/>*/}
                     </header>
                     <div className="changelog-update-descriptions">
                         {
                             description.map((item, index) => <Description key={index} {...item}/>)
                         }
                     </div>
-                    <div className="changelog-files-changed">
-                        <div className="changelog-files-changed-toolbar">
-                            <ul className="changelog-files-changed-filters">
-                                <li>
-									<span className="changelog-files-changed-filter js-changelog-file-filter"
-                                          data-type="new">
-                                        <i className="fa fa-plus changelog-state-new"/>新文件
-                                    </span>
-                                </li>
-                                <li>
-									<span className="changelog-files-changed-filter js-changelog-file-filter"
-                                          data-type="updated">
-										<i className="fa fa-refresh changelog-state-updated"/>更新文件
-                                    </span>
-                                </li>
-                                <li>
-									<span className="changelog-files-changed-filter js-changelog-file-filter"
-                                          data-type="removed">
-                                        <i className="fa fa-times changelog-state-removed"/>已移除文件
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="js-changelog-files-scope">
-                            {
-                                files.map((item, index) => <File key={index} {...item}/>)
-                            }
-                        </div>
-                    </div>
+                    {/*<div className="changelog-files-changed">*/}
+                        {/*<div className="changelog-files-changed-toolbar">*/}
+                            {/*<ul className="changelog-files-changed-filters">*/}
+                                {/*<li>*/}
+									{/*<span className="changelog-files-changed-filter js-changelog-file-filter"*/}
+                                          {/*data-type="new">*/}
+                                        {/*<i className="fa fa-plus changelog-state-new"/>新文件*/}
+                                    {/*</span>*/}
+                                {/*</li>*/}
+                                {/*<li>*/}
+									{/*<span className="changelog-files-changed-filter js-changelog-file-filter"*/}
+                                          {/*data-type="updated">*/}
+										{/*<i className="fa fa-refresh changelog-state-updated"/>更新文件*/}
+                                    {/*</span>*/}
+                                {/*</li>*/}
+                                {/*<li>*/}
+									{/*<span className="changelog-files-changed-filter js-changelog-file-filter"*/}
+                                          {/*data-type="removed">*/}
+                                        {/*<i className="fa fa-times changelog-state-removed"/>已移除文件*/}
+                                    {/*</span>*/}
+                                {/*</li>*/}
+                            {/*</ul>*/}
+                        {/*</div>*/}
+                        {/*<div className="js-changelog-files-scope">*/}
+                            {/*{*/}
+                                {/*files.map((item, index) => <File key={index} {...item}/>)*/}
+                            {/*}*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
                     <div className="changelog-link"/>
                 </div>
             </Fragment>
@@ -75,12 +75,13 @@ class Item extends Component {
 class Description extends Component {
     render() {
         const {type, value} = this.props;
+        const tagName = type === 0 ? '新特性' : (type === 1 ? '修复更新' : '移除');
         const typeName = type === 0 ? 'feature' : (type === 1 ? 'improvement' : 'bug-fix');
         let _render = (
             <Fragment>
                 <p className={'changelog-update-description js-changelog-update-description changelog-' + typeName}
                    data-instafilta-category={typeName}>
-                    <span className="changelog-type">{typeName}</span>
+                    <span className="changelog-type">{tagName}</span>
                     {value}
                 </p>
             </Fragment>

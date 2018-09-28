@@ -140,6 +140,12 @@ export default class Filter extends Component {
     }
 
     render() {
+        const versions = [
+            require('../../../../version/0.2.0').default,
+            require('../../../../version/0.1.2').default,
+            require('../../../../version/0.1.1').default,
+            require('../../../../version/0.1.0').default
+        ];
         return (
             <Fragment>
                 <div className="changelog-filters">
@@ -147,62 +153,28 @@ export default class Filter extends Component {
                     <input id="changelog-filter-feature" className="js-changelog-checkbox changelog-checkbox"
                            type="checkbox" value="feature"/>
                     <label className="changelog-checkbox-label"
-                           htmlFor="changelog-filter-feature">Features</label>
+                           htmlFor="changelog-filter-feature">新特性</label>
                     <input id="changelog-filter-improvement"
                            className="js-changelog-checkbox changelog-checkbox" type="checkbox"
                            value="improvement"/>
                     <label className="changelog-checkbox-label"
-                           htmlFor="changelog-filter-improvement">Improvements</label>
+                           htmlFor="changelog-filter-improvement">修复更新</label>
                     <input id="changelog-filter-bug-fix"
                            className="js-changelog-checkbox changelog-checkbox" type="checkbox"
                            value="bug-fix"/>
                     <label className="changelog-checkbox-label"
-                           htmlFor="changelog-filter-bug-fix">Bug-Fixes</label>
+                           htmlFor="changelog-filter-bug-fix">移除</label>
                     <div className="changelog-scroll-to"> 查看版本
                         <i className="pe-7s-angle-down"/>
                         <ul className="changelog-scroll-to-list">
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v211">v2.1.1</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v210">v2.1.0</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v200">v2.0.0</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v190">v1.9.0</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v180">v1.8.0</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v170">v1.7.0</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v160">v1.6.0</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v150">v1.5.0</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v140">v1.4.0</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v130">v1.3.0</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v120">v1.2.0</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v110">v1.1.0</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v002">v0.0.2</a>
-                            </li>
-                            <li className="changelog-scroll-to-list-item">
-                                <a  className="js-scroll-to" data-target="#v001">v0.0.1</a>
-                            </li>
+                            {
+                                versions.map(item => (
+                                    <li className="changelog-scroll-to-list-item">
+                                        <a className="js-scroll-to"
+                                           data-target={'#' + item.id}>{item.header.version}</a>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                 </div>
