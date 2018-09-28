@@ -25,6 +25,8 @@ export default class extends Component {
                                                component={require('./components/Icon/Icon').default}/>
                                         <Route path="/tutorial/color" exact
                                                component={require('./components/Color/Color').default}/>
+                                        <Route path="/tutorial/typography" exact
+                                               component={require('./components/Typography/Typography').default}/>
                                         <Route path="/tutorial/button" exact
                                                component={require('./components/Button/Button').default}/>
 
@@ -74,7 +76,10 @@ export default class extends Component {
                                                 <a className='selected bolder'>基础</a>
                                                 <ul>
                                                     <li>
-                                                        <NavLink to='/tutorial/color'>状态颜色</NavLink>
+                                                        <NavLink to='/tutorial/color'>色彩</NavLink>
+                                                    </li>
+                                                    <li>
+                                                        <NavLink to='/tutorial/typography'>字体</NavLink>
                                                     </li>
                                                     <li>
                                                         <NavLink to='/tutorial/icon'>图标</NavLink>

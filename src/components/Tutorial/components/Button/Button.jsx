@@ -37,7 +37,7 @@ export default class extends Component {
                     description: '代码示例'
                 }}>
                     <p className='title'>基础按钮</p>
-                    <p>使用 <code>Button</code> 组件可以直接创建一个基本的按钮，也可以通过设置不同的状态颜色对按钮类型进行区分。
+                    <p>使用 <code>Button</code> 组件可以直接创建一个基本的按钮，也可以通过设置不同的色彩对按钮类型进行区分。
                     </p>
                     <Example {...{
                         className: ['demo-button'],
@@ -299,7 +299,7 @@ export default class extends Component {
                         }
                     }}/>
                     <p className='title'>图标按钮</p>
-                    <p>使用带图标的按钮可以使用户更容易理解，所有可使用的按钮参考<NavLink to='/tutorial/color'>状态颜色</NavLink>。</p>
+                    <p>使用带图标的按钮可以使用户更容易理解，所有可使用的按钮参考<NavLink to='/tutorial/color'>色彩</NavLink>。</p>
                     <Example {...{
                         className: ['demo-button'],
                         display: (
@@ -378,12 +378,12 @@ export default class extends Component {
                             ['btnStyle', '定义按钮的外观样式，支持直角矩形，圆角矩形和环形', 'String', 'square / pill / normal', 'normal'],
                             ['color',
                                 <Fragment>定义按钮前景色，支持常规颜色或轮廓颜色（以 <code>outline-</code> 修饰）</Fragment>, 'String',
-                                <Fragment>可选项参考<NavLink to='/tutorial/color'>状态颜色</NavLink></Fragment>, 'default'],
+                                <Fragment>可选项参考<NavLink to='/tutorial/color'>色彩</NavLink></Fragment>, 'default'],
                             ['gradient', '定义按钮的渐变色类型', 'Object', '-', '-'],
                             ['gradient.from', '定义按钮的渐变色起始类型', 'String',
-                                <Fragment>可选项参考<NavLink to='/tutorial/color'>状态颜色</NavLink></Fragment>, '-'],
+                                <Fragment>可选项参考<NavLink to='/tutorial/color'>色彩</NavLink></Fragment>, '-'],
                             ['gradient.to', '定义按钮的渐变色结束类型', 'String',
-                                <Fragment>可选项参考<NavLink to='/tutorial/color'>状态颜色</NavLink></Fragment>, '-'],
+                                <Fragment>可选项参考<NavLink to='/tutorial/color'>色彩</NavLink></Fragment>, '-'],
                             ['size', '定义按钮的大小尺寸', 'String', 'lg / sm / normal', 'normal'],
                             ['isWide', '定义按钮是否以较宽的样式展示', 'Boolean', 'true / false', 'false'],
                             ['isBlock', '定义按钮是否以块级元素的样式展示', 'Boolean', 'true / false', 'false'],

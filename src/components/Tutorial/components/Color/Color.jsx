@@ -12,8 +12,8 @@ export default class extends Component {
         return (
             <Fragment>
                 <Info {...{
-                    title: "状态颜色",
-                    description: 'State Color',
+                    title: "色彩",
+                    description: '使用统一的色彩以提供一致的外观视觉感受。',
                     guide: true
                 }}>
                 </Info>
@@ -129,7 +129,6 @@ export default class extends Component {
                             language: 'jsx'
                         }
                     }} />
-
                 </Info>
             </Fragment>
         );

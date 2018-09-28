@@ -104,7 +104,7 @@ export default class extends Component {
                         }
                     }}/>
                     <p className='title'>带状态选框</p>
-                    <p>设置不同的状态颜色，可以重点突出相关选框，带来更好的用户体验，选框组件支持统一状态设置和选中状态设置。</p>
+                    <p>设置不同的色彩，可以重点突出相关选框，带来更好的用户体验，选框组件支持统一状态设置和选中状态设置。</p>
                     <Note {...{
                         type: 'info',
                         message: "统一状态即在选框所有状态时均显示该状态，选中状态即只有在选中时才会显示该状态。"
@@ -763,10 +763,10 @@ export default class extends Component {
                             ['defaultValue', (<Fragment>
                                 <span>定义当前选项的 <code>value</code> 属性值</span>
                             </Fragment>), 'String / Number', '-', '-'],
-                            ['color', '定义当前选项的状态颜色', 'String',
-                                <Fragment>可选项参考<NavLink to='/tutorial/color'>状态颜色</NavLink></Fragment>, 'default'],
-                            ['checkedColor', '定义当前选项的选中状态颜色', 'String',
-                                <Fragment>可选项参考<NavLink to='/tutorial/color'>状态颜色</NavLink></Fragment>, 'default'],
+                            ['color', '定义当前选项的色彩', 'String',
+                                <Fragment>可选项参考<NavLink to='/tutorial/color'>色彩</NavLink></Fragment>, 'default'],
+                            ['checkedColor', '定义当前选项的选中色彩', 'String',
+                                <Fragment>可选项参考<NavLink to='/tutorial/color'>色彩</NavLink></Fragment>, 'default'],
                             ['isSolid', '定义是否反色显示当前选项', 'Boolean', 'true / false', 'false'],
                             ['isBold', '定义是否加粗显示当前选项', 'Boolean', 'true / false', 'false'],
                             ['isCheckedBold', '定义是否加粗显示当前选项的选中状态', 'Boolean', 'true / false', 'false'],

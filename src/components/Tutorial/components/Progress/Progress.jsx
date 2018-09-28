@@ -70,7 +70,7 @@ export default class extends Component {
                     }}/>
                     <p className='title'>背景颜色</p>
                     <p>不同背景颜色的进度条适用于不同的应用场景，添加 <code>bg</code> 修饰符可以显示不同颜色的进度条，参考<NavLink
-                        to='/tutorial/color'>状态颜色</NavLink>。</p>
+                        to='/tutorial/color'>色彩</NavLink>。</p>
                     <Example {...{
                         className: ['demo-progress'],
                         display: (

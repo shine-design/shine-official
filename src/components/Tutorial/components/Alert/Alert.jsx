@@ -28,7 +28,7 @@ export default class extends Component {
                     description: '代码示例'
                 }}>
                     <p className='title'>基础警告框</p>
-                    <p>使用 <code>Alert</code> 组件可以直接创建一个基础的警告框，也可以通过指定 <code>color</code> 属性设置不同的状态颜色。
+                    <p>使用 <code>Alert</code> 组件可以直接创建一个基础的警告框，也可以通过指定 <code>color</code> 属性设置不同的色彩。
                     </p>
                     <Example {...{
                         className: ['demo-button'],
