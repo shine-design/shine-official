@@ -22,7 +22,7 @@ export default class extends Component {
         return (
             <Fragment>
                 <Info {...{
-                    title: "输入 - Input",
+                    title: "基础输入",
                     description: '用于创建交互式控件，可以接收用户的数据、信息。 ',
                     guide: true
                 }}>

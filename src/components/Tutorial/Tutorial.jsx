@@ -32,6 +32,9 @@ export default class extends Component {
                                                component={require('./components/Input/Input').default}/>
                                         <Route path="/tutorial/check" exact
                                                component={require('./components/Check/Check').default}/>
+                                        <Route path="/tutorial/symbolInput" exact
+                                               component={require('./components/SymbolInput/SymbolInput').default}/>
+
                                         <Route path="/tutorial/event" exact
                                                component={require('./components/Event/Event').default}/>
                                         <Route path="/tutorial/group" exact
@@ -55,11 +58,9 @@ export default class extends Component {
                                     <nav className="menu-vertical-wrapper">
                                         <ul className="menu-vertical  js-menu-vertical" data-prepend-to=".js-layout"
                                             data-select="Menu">
+
                                             <li>
-                                                <NavLink className='selected' to='/tutorial/'>设计理念</NavLink>
-                                            </li>
-                                            <li>
-                                                <a className='selected'>布局</a>
+                                                <a className='selected bolder'>布局</a>
                                                 <ul>
                                                     <li>
                                                         <NavLink to='/tutorial/grid'>栅格系统</NavLink>
@@ -67,7 +68,7 @@ export default class extends Component {
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a className='selected'>基础</a>
+                                                <a className='selected bolder'>基础</a>
                                                 <ul>
                                                     <li>
                                                         <NavLink to='/tutorial/color'>状态颜色</NavLink>
@@ -87,7 +88,7 @@ export default class extends Component {
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a className='selected'>表单</a>
+                                                <a className='selected bolder'>表单</a>
                                                 <ul>
                                                     <li>
                                                         <NavLink to='/tutorial/input'>基础输入</NavLink>
@@ -95,13 +96,19 @@ export default class extends Component {
                                                     <li>
                                                         <NavLink to='/tutorial/check'>单复选框</NavLink>
                                                     </li>
+                                                    <li>
+                                                        <NavLink to='/tutorial/symbolInput'>标志输入</NavLink>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a className='selected'>参考资料</a>
+                                                <a className='selected bolder'>参考资料</a>
                                                 <ul>
                                                     <li>
                                                         <NavLink to='/tutorial/event'>事件系统</NavLink>
+                                                    </li>
+                                                    <li>
+                                                        <NavLink to='/tutorial/' exact={true}>设计理念</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
