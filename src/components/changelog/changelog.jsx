@@ -21,6 +21,7 @@ export default class Changelog extends Component {
                                     <Filter/>
                                     <Items {...{
                                         items: [
+                                            require('../../version/0.2.1').default,
                                             require('../../version/0.2.0').default,
                                             require('../../version/0.1.2').default,
                                             require('../../version/0.1.1').default,

@@ -39,6 +39,8 @@ export default class extends Component {
 
                                         <Route path="/tutorial/progress" exact
                                                component={require('./components/Progress/Progress').default}/>
+                                        <Route path="/tutorial/badge" exact
+                                               component={require('./components/Badge/Badge').default}/>
 
                                         <Route path="/tutorial/event" exact
                                                component={require('./components/Event/Event').default}/>
@@ -86,6 +88,12 @@ export default class extends Component {
                                                     <li>
                                                         <NavLink to='/tutorial/icon'>图标</NavLink>
                                                     </li>
+
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a className='selected bolder'>按钮</a>
+                                                <ul>
                                                     <li>
                                                         <NavLink to='/tutorial/button'>按钮</NavLink>
                                                     </li>
@@ -113,6 +121,9 @@ export default class extends Component {
                                                 <ul>
                                                     <li>
                                                         <NavLink to='/tutorial/progress'>进度条</NavLink>
+                                                    </li>
+                                                    <li>
+                                                        <NavLink to='/tutorial/badge'>标记</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
