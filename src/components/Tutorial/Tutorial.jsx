@@ -46,6 +46,8 @@ export default class extends Component {
                                                component={require('./components/Group/Group').default}/>
                                         <Route path="/tutorial/alert" exact
                                                component={require('./components/Alert/Alert').default}/>
+                                        <Route path="/tutorial/divider" exact
+                                               component={require('./components/Divider/Divider').default}/>
                                     </Switch>
                                 </div>
                             </div>
@@ -111,6 +113,14 @@ export default class extends Component {
                                                 <ul>
                                                     <li>
                                                         <NavLink to='/tutorial/progress'>进度条</NavLink>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a className='selected bolder'>其他</a>
+                                                <ul>
+                                                    <li>
+                                                        <NavLink to='/tutorial/divider'>分隔线</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
