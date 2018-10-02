@@ -19,9 +19,9 @@ export default class extends Component {
                             <div className="col-md-12">
                                 <div className="main-content">
                                     <Article>
-                                        <h4>什么是 Shine CLI？</h4>
+                                        <h4>什么是 Shine Tool？</h4>
                                         <p>
-                                            Shine CLI 是一个用于快速构建基于 React 和 Redux 的轻量应用框架的脚手架工具，底层实现来自 Facebook
+                                            Shine Tool 是一个用于快速构建基于 React 和 Redux 的轻量应用框架的脚手架工具，底层实现来自 Facebook
                                             公司提供的 <a
                                             href='https://github.com/facebook/create-react-app#readme'>create-react-app</a>，支持
                                             side effects、热替换、动态加载、react-native、SSR 等，同时集成了最新的 Shine Design 开发环境
@@ -31,20 +31,20 @@ export default class extends Component {
                                         <Step {...{
                                             steps: [
                                                 {
-                                                    title: '安装 Shine CLI',
+                                                    title: '安装 Shine Tool',
                                                     content: (
                                                         <Fragment>
-                                                            <p>你可以通过在命令行中输入如下指令，完成 Shine CLI 的安装。</p>
+                                                            <p>你可以通过在命令行中输入如下指令，完成 Shine Tool 的安装。</p>
                                                             <Code {...{
                                                                 code: `
-npm install shine-cli -g
+npm install shine-tool -g
                     `,
                                                                 language: 'apacheconf'
                                                             }}/>
                                                             <Note {...{
                                                                 type: 'success',
                                                                 title: '友情提示',
-                                                                message: '为了体验 Shine CLI 新特性，强烈建议将 Node 和 NPM 升级至最新版本。'
+                                                                message: '为了体验 Shine Tool 新特性，强烈建议将 Node 和 NPM 升级至最新版本。'
                                                             }}/>
                                                         </Fragment>
                                                     )
@@ -52,14 +52,14 @@ npm install shine-cli -g
                                                     title: '创建新应用',
                                                     content: (
                                                         <Fragment>
-                                                            <p>安装完 Shine CLI 之后，就可以在命令行里访问到 shine 命令（<a
+                                                            <p>安装完 Shine Tool 之后，就可以在命令行里访问到 <code>shine-tool</code> 命令（<a
                                                                 href='https://stackoverflow.com/questions/15054388/global-node-modules-not-installing-correctly-command-not-found'>不能访问？</a>）。现在，你可以通过
-                                                                <code>shine init</code>
+                                                                <code>shine-tool init</code>
                                                                 创建新应用，你可以通过在命令行中输入如下指令，其中 <code>projectName</code> 为项目名称。
                                                             </p>
                                                             <Code {...{
                                                                 code: `
-shine init projectName
+shine-tool init projectName
                     `,
                                                                 language:'apacheconf'
                                                             }}/>

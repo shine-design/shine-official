@@ -141,6 +141,7 @@ export default class Filter extends Component {
 
     render() {
         const versions = [
+            require('../../../../version/0.2.2').default,
             require('../../../../version/0.2.1').default,
             require('../../../../version/0.2.0').default,
             require('../../../../version/0.1.2').default,
@@ -169,8 +170,8 @@ export default class Filter extends Component {
                         <i className="pe-7s-angle-down"/>
                         <ul className="changelog-scroll-to-list">
                             {
-                                versions.map(item => (
-                                    <li className="changelog-scroll-to-list-item">
+                                versions.map((item, index) => (
+                                    <li className="changelog-scroll-to-list-item" key={index}>
                                         <a className="js-scroll-to"
                                            data-target={'#' + item.id}>{item.header.version}</a>
                                     </li>

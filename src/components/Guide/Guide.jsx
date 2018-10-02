@@ -36,7 +36,7 @@ export default class  extends Component {
                                         <h2>环境搭建</h2>
                                         <p>Shine Design 提供两种集成开发环境的方式。</p>
                                         <h4>构建工具</h4>
-                                        <p>直接使用集成了 Shine Design 开发环境的脚手架工具 <code>Shined-cli</code>，使用该工具可以直接搭建开箱即用的项目，相关资料请参考 <NavLink
+                                        <p>直接使用集成了 Shine Design 开发环境的脚手架工具 <code>Shine Tool</code>，使用该工具可以直接搭建开箱即用的项目，相关资料请参考 <NavLink
                                                 to='cli'>构建工具</NavLink> 。</p>
                                         <h4>手动构建</h4>
                                         <p>手动构建更适合在现有项目中集成 Shine Design

@@ -4,6 +4,8 @@ import Info from "../../../common/Info/Info";
 
 import {Col, Row, Divider} from 'shined';
 import './style.less';
+import APITable from "../../../common/APITable/APITable";
+import {NavLink} from "react-router-dom";
 
 export default class extends Component {
 
@@ -45,6 +47,14 @@ export default class extends Component {
                             code: require('../../../../code/divider/basic').default,
                             language: 'jsx'
                         }
+                    }}/>
+                </Info>
+                <Info {...{
+                    description: '配置参数'
+                }}>
+                    <APITable {...{
+                        data: [],
+                        attribute: true
                     }}/>
                 </Info>
             </Fragment>

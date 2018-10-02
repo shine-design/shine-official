@@ -393,8 +393,7 @@ export default class extends Component {
                             ['isRetina', '定义按钮是否显示两倍分辨率样式', 'Boolean', 'true / false', 'false'],
                             ['iconName', '定义按钮显示的图标类型', 'String', '-', '-'],
                         ],
-                        attribute: true,
-                        callback: true
+                        attribute: true
                     }}/>
                 </Info>
             </Fragment>

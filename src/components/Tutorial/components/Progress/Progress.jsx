@@ -288,7 +288,8 @@ export default class extends Component {
                         data: [
                             ['size', '定义进度条组件的尺寸', 'String', 'lg / sm / md', 'md'],
                             ['itemList', '定义当前当前进度条占比配置项，相关配置见下表', 'Array', '-', '-'],
-                        ]
+                        ],
+                        attribute: true
                     }}/>
                     <p className='title'>占比配置</p>
                     <APITable {...{

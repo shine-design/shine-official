@@ -11,7 +11,8 @@ export default class Changelog extends Component {
             <Fragment>
                 <Background {...{
                     title: '更新日志',
-                    description: 'Omega Design 更新参照 Semantic Versioning 2.0.0 标准进行。'
+                    description: <Fragment>Omega Design 更新参照 <a href='https://semver.org/' target='_blank'>Semantic
+                        Versioning 2.0.0 </a> 标准进行。</Fragment>
                 }}/>
                 <div id='content'>
                     <div className="container">
@@ -21,6 +22,7 @@ export default class Changelog extends Component {
                                     <Filter/>
                                     <Items {...{
                                         items: [
+                                            require('../../version/0.2.2').default,
                                             require('../../version/0.2.1').default,
                                             require('../../version/0.2.0').default,
                                             require('../../version/0.1.2').default,

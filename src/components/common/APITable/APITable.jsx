@@ -56,7 +56,7 @@ export default class extends Component {
                         {
                             attribute && (
                                 <tr>
-                                    <td>attribute</td>
+                                    <td>attributes</td>
                                     <td className='helper left'>自定义属性，指定属性会被设置于容器上</td>
                                     <td>Object</td>
                                     <td>-</td>

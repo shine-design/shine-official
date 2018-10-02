@@ -382,7 +382,8 @@ export default class extends Component {
                             ['align', '定义交叉轴上项目对齐方式', 'String', 'flex-start / flex-end / center / baseline / stretch', '-'],
                             ['wrap', '定义当一条轴线排列空间不足时的折行策略', 'String', 'nowrap / wrap-reverse / wrap', '-'],
                             ['alignContent', '定义存在多根轴线时的对齐方式，当只有一根轴线时，该属性无效', 'String', 'nowrap / wrap-reverse / wrap', '-']
-                        ]
+                        ],
+                        attribute: true
                     }}/>
                     <p className='title'>Col</p>
                     <APITable {...{
@@ -393,7 +394,8 @@ export default class extends Component {
                             ['part', (<Fragment>定义当前项目跨越的格数，支持基于不同尺寸设备单独设置，可同时设置多个值，可附加前缀，见<a
                                 href='#device'>设备尺寸</a>表</Fragment>), 'Number / String / Array', '1 至 12', '-'],
                             ['offset', '定义当前项目基于栅格的偏移量', 'Number', '1 至 11', '-'],
-                        ]
+                        ],
+                        attribute: true
                     }}/>
                     <p className='title'>设备尺寸</p>
                     <div className="table-responsive" id='device'>

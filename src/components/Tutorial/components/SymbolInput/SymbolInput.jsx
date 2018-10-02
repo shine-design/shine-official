@@ -355,7 +355,9 @@ export default class extends Component {
                             ['prepend', '定义标志输入前缀项，支持类型见下表', 'Array', '-', '-'],
                             ['append', '定义标志输入后缀项，支持类型见下表', 'Array', '-', '-'],
                         ],
-                        className: false
+                        className: true,
+                        attribute: true,
+                        callback: true
                     }}/>
                     <p className='title'>支持类型</p>
                     <APITable {...{

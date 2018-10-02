@@ -50,6 +50,8 @@ export default class extends Component {
                                                component={require('./components/Alert/Alert').default}/>
                                         <Route path="/tutorial/divider" exact
                                                component={require('./components/Divider/Divider').default}/>
+                                        <Route path="/tutorial/modal" exact
+                                               component={require('./components/Modal/Modal').default}/>
                                     </Switch>
                                 </div>
                             </div>
@@ -67,15 +69,6 @@ export default class extends Component {
                                     <nav className="menu-vertical-wrapper">
                                         <ul className="menu-vertical  js-menu-vertical" data-prepend-to=".js-layout"
                                             data-select="Menu">
-
-                                            <li>
-                                                <a className='selected bolder'>布局</a>
-                                                <ul>
-                                                    <li>
-                                                        <NavLink to='/tutorial/grid'>栅格系统</NavLink>
-                                                    </li>
-                                                </ul>
-                                            </li>
                                             <li>
                                                 <a className='selected bolder'>基础</a>
                                                 <ul>
@@ -88,7 +81,9 @@ export default class extends Component {
                                                     <li>
                                                         <NavLink to='/tutorial/icon'>图标</NavLink>
                                                     </li>
-
+                                                    <li>
+                                                        <NavLink to='/tutorial/grid'>栅格系统</NavLink>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li>
@@ -130,6 +125,9 @@ export default class extends Component {
                                             <li>
                                                 <a className='selected bolder'>其他</a>
                                                 <ul>
+                                                    <li>
+                                                        <NavLink to='/tutorial/modal'>模态框</NavLink>
+                                                    </li>
                                                     <li>
                                                         <NavLink to='/tutorial/divider'>分隔线</NavLink>
                                                     </li>

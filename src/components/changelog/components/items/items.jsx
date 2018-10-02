@@ -8,7 +8,7 @@ export default class Items extends Component {
             <Fragment>
                 <div className="changelog-items">
                     {
-                        items.map((item,index) => <Item key={index} {...item}/>)
+                        items.map((item, index) => <Item key={index} {...item}/>)
                     }
                 </div>
             </Fragment>
@@ -26,7 +26,8 @@ class Item extends Component {
                 <div id={id} className="changelog-item js-changelog-item">
                     <header className="changelog-header">
                         <h3 className="changelog-version">
-                            <a href={'#' + id}>{version}</a>
+                            <a target='_blank'
+                               href={'//github.com/shine-design/shine-design/releases/tag/' + version}>{version}</a>
                         </h3>
                         <p className="changelog-date">{updateData}</p>
                         {/*<span className="changelog-switch js-changelog-switch"/>*/}
@@ -37,33 +38,33 @@ class Item extends Component {
                         }
                     </div>
                     {/*<div className="changelog-files-changed">*/}
-                        {/*<div className="changelog-files-changed-toolbar">*/}
-                            {/*<ul className="changelog-files-changed-filters">*/}
-                                {/*<li>*/}
-									{/*<span className="changelog-files-changed-filter js-changelog-file-filter"*/}
-                                          {/*data-type="new">*/}
-                                        {/*<i className="fa fa-plus changelog-state-new"/>新文件*/}
-                                    {/*</span>*/}
-                                {/*</li>*/}
-                                {/*<li>*/}
-									{/*<span className="changelog-files-changed-filter js-changelog-file-filter"*/}
-                                          {/*data-type="updated">*/}
-										{/*<i className="fa fa-refresh changelog-state-updated"/>更新文件*/}
-                                    {/*</span>*/}
-                                {/*</li>*/}
-                                {/*<li>*/}
-									{/*<span className="changelog-files-changed-filter js-changelog-file-filter"*/}
-                                          {/*data-type="removed">*/}
-                                        {/*<i className="fa fa-times changelog-state-removed"/>已移除文件*/}
-                                    {/*</span>*/}
-                                {/*</li>*/}
-                            {/*</ul>*/}
-                        {/*</div>*/}
-                        {/*<div className="js-changelog-files-scope">*/}
-                            {/*{*/}
-                                {/*files.map((item, index) => <File key={index} {...item}/>)*/}
-                            {/*}*/}
-                        {/*</div>*/}
+                    {/*<div className="changelog-files-changed-toolbar">*/}
+                    {/*<ul className="changelog-files-changed-filters">*/}
+                    {/*<li>*/}
+                    {/*<span className="changelog-files-changed-filter js-changelog-file-filter"*/}
+                    {/*data-type="new">*/}
+                    {/*<i className="fa fa-plus changelog-state-new"/>新文件*/}
+                    {/*</span>*/}
+                    {/*</li>*/}
+                    {/*<li>*/}
+                    {/*<span className="changelog-files-changed-filter js-changelog-file-filter"*/}
+                    {/*data-type="updated">*/}
+                    {/*<i className="fa fa-refresh changelog-state-updated"/>更新文件*/}
+                    {/*</span>*/}
+                    {/*</li>*/}
+                    {/*<li>*/}
+                    {/*<span className="changelog-files-changed-filter js-changelog-file-filter"*/}
+                    {/*data-type="removed">*/}
+                    {/*<i className="fa fa-times changelog-state-removed"/>已移除文件*/}
+                    {/*</span>*/}
+                    {/*</li>*/}
+                    {/*</ul>*/}
+                    {/*</div>*/}
+                    {/*<div className="js-changelog-files-scope">*/}
+                    {/*{*/}
+                    {/*files.map((item, index) => <File key={index} {...item}/>)*/}
+                    {/*}*/}
+                    {/*</div>*/}
                     {/*</div>*/}
                     <div className="changelog-link"/>
                 </div>
@@ -79,11 +80,11 @@ class Description extends Component {
         const typeName = type === 0 ? 'feature' : (type === 1 ? 'improvement' : 'bug-fix');
         let _render = (
             <Fragment>
-                <p className={'changelog-update-description js-changelog-update-description changelog-' + typeName}
-                   data-instafilta-category={typeName}>
+                <div className={'changelog-update-description js-changelog-update-description changelog-' + typeName}
+                     data-instafilta-category={typeName}>
                     <span className="changelog-type">{tagName}</span>
                     {value}
-                </p>
+                </div>
             </Fragment>
         );
         return (
