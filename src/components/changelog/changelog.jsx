@@ -11,7 +11,7 @@ export default class Changelog extends Component {
             <Fragment>
                 <Background {...{
                     title: '更新日志',
-                    description: <Fragment>Omega Design 更新参照 <a href='https://semver.org/' target='_blank'>Semantic
+                    description: <Fragment>Shine Design 更新参照 <a href='https://semver.org/' target='_blank'>Semantic
                         Versioning 2.0.0 </a> 标准进行。</Fragment>
                 }}/>
                 <div id='content'>
