@@ -29,6 +29,8 @@ export default class extends Component {
                                                component={require('./components/Typography/Typography').default}/>
                                         <Route path="/tutorial/button" exact
                                                component={require('./components/Button/Button').default}/>
+                                        <Route path="/tutorial/dropDown" exact
+                                               component={require('./components/Dropdown/Dropdown').default}/>
 
                                         <Route path="/tutorial/input" exact
                                                component={require('./components/Input/Input').default}/>
@@ -94,6 +96,9 @@ export default class extends Component {
                                                     </li>
                                                     <li>
                                                         <NavLink to='/tutorial/group'>按钮组</NavLink>
+                                                    </li>
+                                                    <li>
+                                                        <NavLink to='/tutorial/dropDown'>下拉按钮组</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
