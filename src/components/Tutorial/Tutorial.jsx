@@ -128,6 +128,14 @@ export default class extends Component {
                                                 </ul>
                                             </li>
                                             <li>
+                                                <a className='selected bolder'>通知</a>
+                                                <ul>
+                                                    <li>
+                                                        <NavLink to='/tutorial/alert'>警告</NavLink>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
                                                 <a className='selected bolder'>其他</a>
                                                 <ul>
                                                     <li>
