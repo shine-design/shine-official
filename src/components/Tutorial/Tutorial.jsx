@@ -19,6 +19,7 @@ export default class extends Component {
                                     <Switch>
                                         <Route path="/tutorial/" exact
                                                component={require('./components/index').default}/>
+
                                         <Route path="/tutorial/grid" exact
                                                component={require('./components/Grid/Grid').default}/>
                                         <Route path="/tutorial/icon" exact
@@ -54,6 +55,8 @@ export default class extends Component {
                                                component={require('./components/Divider/Divider').default}/>
                                         <Route path="/tutorial/modal" exact
                                                component={require('./components/Modal/Modal').default}/>
+                                        <Route path="/tutorial/tooltip" exact
+                                               component={require('./components/Tooltip/Tooltip').default}/>
                                     </Switch>
                                 </div>
                             </div>
@@ -75,16 +78,16 @@ export default class extends Component {
                                                 <a className='selected bolder'>基础</a>
                                                 <ul>
                                                     <li>
-                                                        <NavLink to='/tutorial/color'>色彩</NavLink>
+                                                        <NavLink to='/tutorial/grid'>Layout 布局</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/typography'>字体</NavLink>
+                                                        <NavLink to='/tutorial/color'>Color 色彩</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/icon'>图标</NavLink>
+                                                        <NavLink to='/tutorial/typography'>Typography 字体</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/grid'>栅格系统</NavLink>
+                                                        <NavLink to='/tutorial/icon'>Icon 图标</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -92,13 +95,13 @@ export default class extends Component {
                                                 <a className='selected bolder'>按钮</a>
                                                 <ul>
                                                     <li>
-                                                        <NavLink to='/tutorial/button'>按钮</NavLink>
+                                                        <NavLink to='/tutorial/button'>Button 按钮</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/group'>按钮组</NavLink>
+                                                        <NavLink to='/tutorial/group'>Group 按钮组</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/dropDown'>下拉按钮组</NavLink>
+                                                        <NavLink to='/tutorial/dropDown'>Dropdown 下拉按钮组</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -106,13 +109,13 @@ export default class extends Component {
                                                 <a className='selected bolder'>表单</a>
                                                 <ul>
                                                     <li>
-                                                        <NavLink to='/tutorial/input'>基础输入</NavLink>
+                                                        <NavLink to='/tutorial/input'>Input 基础输入</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/check'>单复选框</NavLink>
+                                                        <NavLink to='/tutorial/check'>Radio 单复选框</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/symbolInput'>标志输入</NavLink>
+                                                        <NavLink to='/tutorial/symbolInput'>Symbol 标志输入</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -120,10 +123,10 @@ export default class extends Component {
                                                 <a className='selected bolder'>数据</a>
                                                 <ul>
                                                     <li>
-                                                        <NavLink to='/tutorial/progress'>进度条</NavLink>
+                                                        <NavLink to='/tutorial/progress'>Progress 进度条</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/badge'>标记</NavLink>
+                                                        <NavLink to='/tutorial/badge'>Badge 标记</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -131,7 +134,7 @@ export default class extends Component {
                                                 <a className='selected bolder'>通知</a>
                                                 <ul>
                                                     <li>
-                                                        <NavLink to='/tutorial/alert'>警告</NavLink>
+                                                        <NavLink to='/tutorial/alert'>Alert 警告</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -139,10 +142,13 @@ export default class extends Component {
                                                 <a className='selected bolder'>其他</a>
                                                 <ul>
                                                     <li>
-                                                        <NavLink to='/tutorial/modal'>模态框</NavLink>
+                                                        <NavLink to='/tutorial/modal'>Modal 模态框</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/divider'>分隔线</NavLink>
+                                                        <NavLink to='/tutorial/divider'>Divider 分隔线</NavLink>
+                                                    </li>
+                                                    <li>
+                                                        <NavLink to='/tutorial/tooltip'>Tooltip 文字提示</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
