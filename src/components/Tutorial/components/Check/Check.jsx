@@ -22,7 +22,7 @@ export default class extends Component {
             <Fragment>
                 <Info {...{
                     title: "单复选框",
-                    description: '用于创建交互式控件，可以接收用户的数据、信息。 ',
+                    description: '创建一系列可供用户选择的预设置项。',
                     guide: true
                 }}>
                 </Info>

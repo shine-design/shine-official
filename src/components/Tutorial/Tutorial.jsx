@@ -39,6 +39,8 @@ export default class extends Component {
                                                component={require('./components/Check/Check').default}/>
                                         <Route path="/tutorial/symbolInput" exact
                                                component={require('./components/SymbolInput/SymbolInput').default}/>
+                                        <Route path="/tutorial/switch" exact
+                                               component={require('./components/Switch/Switch').default}/>
 
                                         <Route path="/tutorial/progress" exact
                                                component={require('./components/Progress/Progress').default}/>
@@ -116,6 +118,9 @@ export default class extends Component {
                                                     </li>
                                                     <li>
                                                         <NavLink to='/tutorial/symbolInput'>Symbol 标志输入</NavLink>
+                                                    </li>
+                                                    <li>
+                                                        <NavLink to='/tutorial/switch'>Switch 开关</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>

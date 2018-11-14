@@ -23,7 +23,7 @@ export default class extends Component {
             <Fragment>
                 <Info {...{
                     title: "基础输入",
-                    description: '用于创建交互式控件，可以接收用户的数据、信息。 ',
+                    description: '创建交互式控件，可以接收用户的数据、信息。 ',
                     guide: true
                 }}>
                 </Info>
