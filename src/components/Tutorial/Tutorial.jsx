@@ -41,6 +41,8 @@ export default class extends Component {
                                                component={require('./components/SymbolInput/SymbolInput').default}/>
                                         <Route path="/tutorial/switch" exact
                                                component={require('./components/Switch/Switch').default}/>
+                                        <Route path="/tutorial/datepicker" exact
+                                               component={require('./components/DatePicker/DatePicker').default}/>
 
                                         <Route path="/tutorial/progress" exact
                                                component={require('./components/Progress/Progress').default}/>
@@ -121,6 +123,9 @@ export default class extends Component {
                                                     </li>
                                                     <li>
                                                         <NavLink to='/tutorial/switch'>Switch 开关</NavLink>
+                                                    </li>
+                                                    <li>
+                                                        <NavLink to='/tutorial/datepicker'>DatePicker 日期选择器</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
