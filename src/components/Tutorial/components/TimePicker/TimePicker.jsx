@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import Example from "../../../common/Example/Example";
 import Info from "../../../common/Info/Info";
 import Note from '../../../common/Note/Note';
-import {Col, Row, Form, DatePicker, Input} from 'shined';
+import {Col, Row, Form, TimePicker, Input} from 'shined';
 import {NavLink} from "react-router-dom";
 
 export default class extends Component {
@@ -11,8 +11,8 @@ export default class extends Component {
         return (
             <Fragment>
                 <Info {...{
-                    title: "日期选择器",
-                    description: '从弹出框或内联日历选择一个日期。',
+                    title: "时间选择器",
+                    description: '从弹出框或内联日历选择一个时间。',
                     guide: true
                 }}>
                 </Info>
@@ -40,13 +40,13 @@ export default class extends Component {
                                 <Row className={['helper', 'mb10', 'demo']}>
                                     <Col part={12}>
                                         <Form>
-                                            <DatePicker>
+                                            <TimePicker>
                                                 <Input {...{
-                                                    label: '选择日期',
-                                                    placeholder: '请选择日期',
+                                                    label: '选择时间',
+                                                    placeholder: '请选择时间',
                                                     isReadOnly: true
                                                 }}/>
-                                            </DatePicker>
+                                            </TimePicker>
                                         </Form>
                                     </Col>
                                 </Row>
@@ -64,7 +64,7 @@ export default class extends Component {
                     <Note {...{
                         type: 'info',
                         message: <p>日期选择器组件底层由第三方插件实现，相关配置项请参考 <a
-                            href="//bootstrap-datepicker.readthedocs.io/en/latest/" target="_blank">Bootstrap DatePicker
+                            href="//bootstrap-datepicker.readthedocs.io/en/latest/TimePicker.jsx" target="_blank">Bootstrap DatePicker
                             配置</a> 。</p>
                     }}/>
                 </Info>
