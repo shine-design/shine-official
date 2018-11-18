@@ -45,6 +45,8 @@ export default class extends Component {
                                                component={require('./components/DatePicker/DatePicker').default}/>
                                         <Route path="/tutorial/datetimepicker" exact
                                                component={require('./components/DateTimePicker/DateTimePicker').default}/>
+                                        <Route path="/tutorial/daterangepicker" exact
+                                               component={require('./components/DateRangePicker/DateRangePicker').default}/>
                                         <Route path="/tutorial/timepicker" exact
                                                component={require('./components/TimePicker/TimePicker').default}/>
 
@@ -170,12 +172,16 @@ export default class extends Component {
                                                         <NavLink to='/tutorial/datepicker'>DatePicker 日期选择器</NavLink>
                                                     </li>
                                                     <li>
+                                                        <NavLink to='/tutorial/timepicker'>TimePicker
+                                                            时间选择器</NavLink>
+                                                    </li>
+                                                    <li>
                                                         <NavLink to='/tutorial/datetimepicker'>DateTimePicker
                                                             日期时间选择器</NavLink>
                                                     </li>
                                                     <li>
-                                                        <NavLink to='/tutorial/timepicker'>TimePicker
-                                                            时间选择器</NavLink>
+                                                        <NavLink to='/tutorial/daterangepicker'>DateRangePicker
+                                                            日期范围选择器</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>

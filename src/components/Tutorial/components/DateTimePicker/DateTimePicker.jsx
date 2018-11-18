@@ -14,7 +14,7 @@ export default class extends Component {
             <Fragment>
                 <Info {...{
                     title: "日期时间选择器",
-                    description: '从弹出框或内联日历选择一个日期和时间。',
+                    description: '从弹出或内联窗口中选择一个日期和时间。',
                     guide: true
                 }}>
                 </Info>
