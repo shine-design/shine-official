@@ -33,6 +33,8 @@ export default class extends Component {
                                         <Route path="/tutorial/dropDown" exact
                                                component={require('./components/Dropdown/Dropdown').default}/>
 
+                                        <Route path="/tutorial/form" exact
+                                               component={require('./components/Form/Form').default}/>
                                         <Route path="/tutorial/input" exact
                                                component={require('./components/Input/Input').default}/>
                                         <Route path="/tutorial/check" exact
@@ -46,7 +48,7 @@ export default class extends Component {
                                         <Route path="/tutorial/datetimepicker" exact
                                                component={require('./components/DateTimePicker/DateTimePicker').default}/>
                                         {/*<Route path="/tutorial/daterangepicker" exact*/}
-                                               {/*component={require('./components/DateRangePicker/DateRangePicker').default}/>*/}
+                                        {/*component={require('./components/DateRangePicker/DateRangePicker').default}/>*/}
                                         <Route path="/tutorial/timepicker" exact
                                                component={require('./components/TimePicker/TimePicker').default}/>
 
@@ -67,6 +69,9 @@ export default class extends Component {
                                                component={require('./components/Modal/Modal').default}/>
                                         <Route path="/tutorial/tooltip" exact
                                                component={require('./components/Tooltip/Tooltip').default}/>
+
+                                        <Route path="/tutorial/validate" exact
+                                               component={require('./components/Validate/Validate').default}/>
                                     </Switch>
                                 </div>
                             </div>
@@ -118,6 +123,9 @@ export default class extends Component {
                                             <li>
                                                 <a className='selected bolder'>表单</a>
                                                 <ul>
+                                                    <li>
+                                                        <NavLink to='/tutorial/form'>Form 表单容器</NavLink>
+                                                    </li>
                                                     <li>
                                                         <NavLink to='/tutorial/input'>Input 基础输入</NavLink>
                                                     </li>
@@ -179,6 +187,9 @@ export default class extends Component {
                                             <li>
                                                 <a className='selected bolder'>参考资料</a>
                                                 <ul>
+                                                    <li>
+                                                        <NavLink to='/tutorial/validate'>表单校验</NavLink>
+                                                    </li>
                                                     <li>
                                                         <NavLink to='/tutorial/event'>事件系统</NavLink>
                                                     </li>
