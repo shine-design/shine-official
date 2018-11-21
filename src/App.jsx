@@ -16,6 +16,13 @@ export default class App extends Component {
         this.preLoader();
     }
 
+    componentWillReceiveProps(nextProps) {
+        
+        if (this.props.location.pathname !== nextProps.location.pathname) {
+            if ($('html,body').scrollTop() !== 0) $('html,body').animate({scrollTop: '0px'}, 800);
+        }
+    }
+
     preLoader() {
         $('.js-preloader').fadeOut('slow', function () {
             $(this).remove();
