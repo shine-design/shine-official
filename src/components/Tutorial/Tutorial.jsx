@@ -63,6 +63,8 @@ export default class extends Component {
                                                component={require('./components/Group/Group').default}/>
                                         <Route path="/tutorial/alert" exact
                                                component={require('./components/Alert/Alert').default}/>
+                                        <Route path="/tutorial/loader" exact
+                                               component={require('./components/Loader/Loader').default}/>
                                         <Route path="/tutorial/divider" exact
                                                component={require('./components/Divider/Divider').default}/>
                                         <Route path="/tutorial/modal" exact
@@ -163,10 +165,13 @@ export default class extends Component {
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a className='selected bolder'>通知</a>
+                                                <a className='selected bolder'>交互</a>
                                                 <ul>
                                                     <li>
                                                         <NavLink to='/tutorial/alert'>Alert 警告</NavLink>
+                                                    </li>
+                                                    <li>
+                                                        <NavLink to='/tutorial/loader'>Loader 加载</NavLink>
                                                     </li>
                                                 </ul>
                                             </li>
