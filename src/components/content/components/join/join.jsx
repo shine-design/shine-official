@@ -13,7 +13,9 @@ export default class Header extends Component {
                         <div className="row">
                             <div className="col-md-12">
                                 <h3 className="call-to-action-title"> 加入 Shine 开源社区 </h3>
-                                <p className="call-to-action-description"> Shine 愿意像愚公一样，用坚持不懈的努力帮助用户提高使用效率，那么你呢？ </p>
+                                <p className="call-to-action-description" style={{marginBottom:'10px'}}> 哪有什么天生如此，只是我们天天坚持。Shine Design 愿像愚公一样，用坚持不懈的努力帮助开发者提高效率，那么你呢？ </p>
+                                <p className="call-to-action-description" style={{textAlign: 'right'}}> Shine Design
+                                    开发团队</p>
                                 <div className="call-to-action-buttons">
                                     <NavLink to='/contribute' className="call-to-action-button">贡献指南</NavLink>
                                 </div>

@@ -9,7 +9,7 @@ export default class Header extends Component {
             <Fragment>
                 <div className="container">
                     <div className="promo-title-wrapper helper pt60">
-                        <h3 className="promo-title" > 特 性 </h3>
+                        <h3 className="promo-title" > 设计理念 </h3>
                         <p className="promo-description"> 服务于企业级产品的设计体系，基于确定和自然的设计价值观上的模块化解决方案</p>
                     </div>
                     <div className="row">

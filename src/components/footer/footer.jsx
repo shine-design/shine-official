@@ -130,7 +130,7 @@ export default class Footer extends Component {
                                                     <h5 className="footer-extended-menu-title">文档</h5>
                                                     <ul className="footer-extended-menu-list">
                                                         <li>
-                                                            <NavLink to='/guide'>新手入门</NavLink>
+                                                            <NavLink to='/guide'>开发教程</NavLink>
                                                         </li>
                                                         <li>
                                                             <NavLink to='/tutorial'>组件文档</NavLink>

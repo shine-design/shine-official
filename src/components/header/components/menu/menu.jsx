@@ -51,7 +51,7 @@ export default class Menu extends Component {
                         <NavLink to='/'>首页</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/guide'>新手入门</NavLink>
+                        <NavLink to='/guide'>开发教程</NavLink>
                     </li>
                     <li>
                         <NavLink to='/tutorial'>组件文档</NavLink>
